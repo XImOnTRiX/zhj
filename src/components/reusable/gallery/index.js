@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import Gallery from './gallery';
+import GalleryFilter from './galleryFilter';
 
 class GallerySection extends Component {
   constructor(props){
     super(props);
     this.state = {
       data: {
-        catergory: ["gerade", "ungerade"],
-        path: ["1", "2", "3", "4", "5", "6"]
+        path: ["1", "2", "3", "4", "5", "6"],
+        filter: ["gerade", "ungerade"]
       }
     }
   }
@@ -17,7 +18,7 @@ class GallerySection extends Component {
       <div className="container-fullWidth gallery-container">
         <h1 className="light">Gallery</h1>
         <div className="row">
-          <div className="column colmd-4">Hello</div>
+          <div className="column colmd-4"><GalleryFilter data={this.state.data}/></div>
           <div className="column col"><Gallery data={this.state.data}/></div>
         </div>
       </div>

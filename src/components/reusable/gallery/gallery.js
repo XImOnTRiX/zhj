@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 class Gallery extends Component{
   renderGallery = (data) => {
-    console.log(data);
     return(
       data.path.map((image) => {
         return(
