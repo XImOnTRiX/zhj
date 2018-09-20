@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class GalleryFilter extends Component{
   galleryFilter = (data) => {
     return(
-      data.filter.map((filterList) => {
+      data.category.map((filterList) => {
         return(
           <div className="filterList light align-center">
             {filterList}
