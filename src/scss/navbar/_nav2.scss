@@ -67,9 +67,10 @@
 
 .nav-container {
   width: 100%;
-  height: auto;
+  height: 100px;
   position: fixed;
   pointer-events: none;
+  z-index: 9999;
   &.open-nav {
     height: 100vh;
     position: fixed;

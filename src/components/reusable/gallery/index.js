@@ -7,7 +7,7 @@ class GallerySection extends Component {
     this.state = {
       data: {
         catergory: ["gerade", "ungerade"],
-        path: ["1", "2", "3", "4", "5", "6"]
+        path: ["1", "2", "3", "4", "5", "6", "7"]
       }
     }
   }
@@ -18,7 +18,9 @@ class GallerySection extends Component {
         <h1 className="light">Gallery</h1>
         <div className="row">
           <div className="column colmd-4">Hello</div>
-          <div className="column col"><Gallery data={this.state.data}/></div>
+          <div className="column colmd-8">
+            <Gallery data={this.state.data}/>
+          </div>
         </div>
       </div>
     );
