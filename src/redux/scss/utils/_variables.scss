@@ -1,0 +1,33 @@
+// main: ../index.scss
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500');
+
+// FONT STUFF
+$font-primary: 'Raleway';
+$font-secondary: 'Raleway';
+
+$font-size: 15px;
+$font-line-height-primary: $font-size * 1.3333333333333333;
+
+$font-color-primary: #111;
+$font-color-accent: #fff;
+
+
+// MAIN COLORS
+$color-primary: rgb(255, 222, 0);
+$color-primary-dark: rgb(255, 210, 60);
+$color-primary-light: rgb(197, 175, 255);
+
+$color-secondary: #333;
+$color-secondary-dark: #111;
+$color-secondary-light: #444;
+
+$color-tertiary: #333;
+$color-tertiary-dark: #111;
+$color-tertiary-light: #444;
+
+$success: rgb(105, 255, 74);
+$error: rgb(255, 64, 64);
+
+$selection-color: $font-color-accent;
+$selection-bg-COLOR: $font-color-primary;

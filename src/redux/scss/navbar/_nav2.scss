@@ -1,0 +1,259 @@
+//main: ../index.scss
+
+.burger-menu {
+  pointer-events: all;
+  height: 30px;
+  width: 40px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  z-index: 99999;
+
+  .burger {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #2b2b2b;
+    top: calc(50% - 2.5px);
+    transition: 200ms;
+  }
+
+  &:before {
+    display: block;
+    content: "";
+    height: 5px;
+    width: 100%;
+    background-color: #2b2b2b;
+  }
+  &:after {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 5px;
+    width: 100%;
+    background-color: #2b2b2b;
+    bottom: 0;
+  }
+
+  &.open-nav {
+    .burger {
+      opacity: 0;
+      transition: 500ms;
+    }
+    &:before {
+      display: block;
+      content: "";
+      height: 5px;
+      width: 100%;
+      background-color: $color-primary;
+      transform: rotate(45deg);
+      margin-top: 12px;
+    }
+    &:after {
+      position: absolute;
+      display: block;
+      content: "";
+      height: 5px;
+      width: 100%;
+      background-color: $color-primary;
+      bottom: 12px;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+
+.nav-container {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  pointer-events: none;
+  &.open-nav {
+    height: 100vh;
+    position: fixed;
+    background-color: white;
+    z-index: 0;
+    transition: 300ms;
+    z-index: 200;
+    pointer-events: all;
+  }
+  &.closed-nav {
+    height: 100vh;
+    position: fixed;
+    z-index: 0;
+    transition: 700ms;
+    transition-delay: 800ms;
+    z-index: 200;
+    pointer-events: none;
+  }
+}
+
+
+nav {
+  position: fixed;
+  right: -50%;
+  top: 30%;
+  width: 50%;
+ &.open-nav {
+   opacity: 1;
+   transition: 700ms;
+   right: 30%;
+ }
+ &.closed-nav {
+   opacity: 0;
+   transition: 700ms;
+   transition-delay: 600ms;
+   right: -50%;
+ }
+ p {
+   text-align: right;
+   padding-right: 30px;
+   opacity: 0;
+   @for $i from 1 through 6 {
+     &.nav-link-#{$i} {
+       &.open-nav {
+        padding-right: 0px;
+        transition: 400ms;
+        transition-delay: 150ms * $i;
+        opacity: 1;
+       }
+       &.closed-nav {
+         padding-right: 30px;
+         transition: 280ms;
+         transition-delay: 80ms * $i;
+         opacity: 0;
+       }
+     }
+   }
+   a {
+     font-size: 2em;
+     line-height: 1.5em;
+     color: $color-primary;
+   }
+   .active {
+     color: white;
+   }
+ }
+}
+
+
+
+
+svg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+circle {
+  cx: 100vw;
+  &.open-nav {
+    animation: big 1s ease forwards;
+    r: 850;
+  }
+  &.closed-nav {
+    animation: small 1s ease forwards;
+    animation-delay: 500ms;
+    r: 850;
+  }
+  &.circle-2 {
+    cx: 100vw;
+    &.open-nav {
+      animation: big-2 1s ease forwards;
+      r: 1100;
+    }
+    &.closed-nav {
+      animation: small-2 1s ease forwards;
+      animation-delay: 500ms;
+      r: 1100;
+    }
+  }
+}
+
+
+.path-container {
+  width: 2600px;
+  height: 2600px;
+  top: -1300px;
+  right: -1300px;
+  background-color: rgba(0,0,0,0.0);
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+@for $i from 1 through 6 {
+  .#{nav-image}-#{$i} {
+    width: 200px;
+    height: 200px;
+    opacity: 1;
+    filter: grayscale(100%);
+
+    offset-path: path("M1300,0 A1300,1300 0 1,1 1300,2600 A1300,1300 0 1,1 1300,0");
+    pointer-events: all;
+
+    &.closed-nav {
+      animation: ball-out#{$i} 1.5s ease-in forwards;
+      animation-delay: 100ms * $i;
+      offset-distance: 62% + $i * 2;
+      transform: rotate(86deg + $i * 7);
+    }
+    &.open-nav {
+      animation: ball#{$i} 1.5s ease-out forwards;
+      animation-delay: 100ms * $i;
+    }
+  }
+}
+
+
+
+
+
+@keyframes big {
+  from {r: 0 };
+  to { r: 850 }
+}
+
+@keyframes small {
+  from {r: 850 };
+  to { r: 0 }
+}
+
+@keyframes big-2 {
+  from {r: 0 };
+  to { r: 1100 }
+}
+
+@keyframes small-2 {
+  from {r: 1100 };
+  to { r: 0 }
+}
+
+
+@for $i from 1 through 6 {
+  @keyframes ball#{$i} {
+    from {
+      offset-distance: 0%;
+    }
+    to {
+      offset-distance: 76% - $i * 2;
+      transform: rotate(86deg + $i * 7);
+    }
+  }
+}
+
+@for $i from 1 through 6 {
+  @keyframes ball-out#{$i} {
+    from {
+      offset-distance: 62% + $i * 2;
+      transform: rotate(86deg + $i * 7);
+    }
+    to {
+      offset-distance: 0%;
+      transform: rotate(0deg);
+    }
+  }
+}

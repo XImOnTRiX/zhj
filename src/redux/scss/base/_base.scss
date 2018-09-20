@@ -1,0 +1,51 @@
+// main: ../index.scss
+
+html {
+  font-size: calc(11px + 0.8vw);
+  @include respond-to($medium-small) {
+    font-size: calc(12px + .64vw);
+  };
+  @include respond-to($medium) {
+    font-size: calc(14px + .4vw);
+  };
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-primary;
+  line-height: $font-line-height-primary;
+  color: $font-color-primary;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+* {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  &::before,
+  &::after {
+    @include transition(0.3s);
+    box-sizing: border-box;
+  }
+}
+
+@include selection() {
+  color: $selection-color;
+  background-color: $selection-bg-COLOR;
+};
+
+.pointer {
+  cursor: pointer;
+}
+.inline-block {
+  display: inline-block;
+}
+.block {
+  display: block;
+}
