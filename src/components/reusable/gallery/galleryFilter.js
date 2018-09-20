@@ -5,13 +5,14 @@ class GalleryFilter extends Component{
     return(
       data.category.map((filterList) => {
         return(
-          <h2 className="light align-center" onClick={this.props.filter}>{filterList}</h2>
+          <h2 className="light align-center" onClick={() => this.props.filter(filterList)}>{filterList}</h2>
         );
       })
     );
   }
+
   render(){
-    const { data } = this.props;
+    const { data, filter } = this.props;
     return(
       <div>
         {this.galleryFilter(data)}

@@ -10,14 +10,15 @@ class GallerySection extends Component {
         category: ["gerade", "ungerade"],
         path: ["1", "2", "3", "4", "5", "6", "7"]
       },
-      filter: ''
+      filter: '',
     }
   }
-  handleFilter = () => {
+
+  handleFilter = (filter) => {
+    console.log(filter);
     this.setState({
-      filter:
+      filter: filter
     })
-    console.log(this.state.data.filter);
   }
 
   render(){
@@ -25,8 +26,9 @@ class GallerySection extends Component {
       <div className="container-fullWidth gallery-container">
         <h1 className="light">Gallery</h1>
         <div className="row">
-          <div className="column colmd-4"><GalleryFilter data={this.state.data} filter={this.handleFilter}/></div>
-          <div className="column colmd-8"><Gallery data={this.state.data}/></div>
+          <div className="column colmd-4"><GalleryFilter data={this.state.data}
+            filter={this.handleFilter}/></div>
+          <div className="column colmd-8"><Gallery data={this.state.data} filter={this.state.filter}/></div>
         </div>
       </div>
     );

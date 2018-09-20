@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 
 class Gallery extends Component{
   renderGallery = (data) => {
+    console.log(this.props.filter);
     return(
       data.path.map((image) => {
         return(
