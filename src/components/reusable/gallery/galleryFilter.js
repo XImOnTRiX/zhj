@@ -5,9 +5,7 @@ class GalleryFilter extends Component{
     return(
       data.category.map((filterList) => {
         return(
-          <div className="filterList light align-center">
-            {filterList}
-          </div>
+          <h2 className="light align-center" onClick={this.props.filter}>{filterList}</h2>
         );
       })
     );
@@ -16,9 +14,7 @@ class GalleryFilter extends Component{
     const { data } = this.props;
     return(
       <div>
-        <div>
-          {this.galleryFilter(data)}
-        </div>
+        {this.galleryFilter(data)}
       </div>
     );
   }
