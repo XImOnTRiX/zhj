@@ -1,24 +1,45 @@
 import React, { Component } from 'react';
 
+import { GET_URL, GET_TOKEN } from '../../../config';
 import Slider from 'react-slick';
 
 class Gallery extends Component{
-  renderGallery = (data) => {
-    console.log(this.props.filter);
+  renderGallery = (data, filter, name) => {
+    console.log(data);
     return(
-      data.path.map((image) => {
-        return(
-          <div className="gal-padding">
-            <div className="gallery-item">
-              {image}
-            </div>
-          </div>
-        );
+      data.galleries.map((gallery, i) => {
+        if (gallery.title == name) {
+          return(
+            gallery.images.map((image, i) => {
+              console.log(filter);
+              if(filter === '') {
+                return(
+                  <div key={i} className="gal-padding">
+                    <div className="gallery-item">
+                      <img src={'http://localhost' + image.path} />
+                    </div>
+                  </div>
+                );
+              } else if(image.meta.category === filter) {
+                return(
+                  <div key={i} className="gal-padding">
+                    <div className="gallery-item">
+                      <img src={'http://localhost' + image.path} />
+                    </div>
+                  </div>
+                );
+              } 
+            })
+          );
+        } else {
+          console.log('false');
+          return;
+        }
       })
     );
   }
   render(){
-    const { data } = this.props;
+    const { data, filter, name } = this.props;
 
     var settings = {
       dots: true,
@@ -48,7 +69,7 @@ class Gallery extends Component{
     return(
       <div className="gallery">
         <Slider {...settings}>
-          {this.renderGallery(data)}
+          {this.renderGallery(data, filter, name)}
         </Slider>
       </div>
     );
