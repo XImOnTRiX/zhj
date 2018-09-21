@@ -17,6 +17,7 @@
   height: 200px;
   background-color: #ebebeb;
   border-radius: 8px;
+  overflow: hidden;
 
   @include respond-to($medium) {
     height: 300px;
