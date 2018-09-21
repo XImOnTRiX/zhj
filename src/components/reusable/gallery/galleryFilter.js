@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
 
 class GalleryFilter extends Component{
-  galleryFilter = (data) => {
+  galleryFilter = (data, name) => {
     return(
-      data.category.map((filterList) => {
-        return(
-          <h2 className="light align-center" onClick={() => this.props.filter(filterList)}>{filterList}</h2>
-        );
+      data.galleries.map((gallery) => {
+        if(gallery.title == name) {
+          return(
+            gallery.categorys.map((category, i) => {
+              return  <h3 key={i + 'filter'} className="light align-left" onClick={() => this.props.filter(category)}>{category}</h3>
+            })
+          );
+        }
       })
     );
   }
 
   render(){
-    const { data, filter } = this.props;
+    const { data, filter, name } = this.props;
     return(
       <div>
-        {this.galleryFilter(data)}
+        {this.galleryFilter(data, name)}
       </div>
     );
   }
