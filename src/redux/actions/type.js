@@ -1,1 +1,1 @@
-export const TEST = 'test';
+export const FETCH_GALLERY = 'fetch_gallery';
