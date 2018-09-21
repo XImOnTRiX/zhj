@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
 import Gallery from './gallery';
 import GalleryFilter from './galleryFilter';
+import { connect } from 'react-redux';
+import { fetchGallerys } from '../../../redux/actions';
+import { GET_TOKEN, GET_URL } from '../../../config';
 
 class GallerySection extends Component {
   constructor(props){
     super(props);
     this.state = {
-      data: {
-        category: ["gerade", "ungerade"],
-        path: ["1", "2", "3", "4", "5", "6", "7"]
-      },
-      filter: '',
+      filter: ''
     }
+  }
+
+  componentDidMount() {
+    this.props.fetchGallerys(`${GET_URL}/gallery?token=${GET_TOKEN}`);
+    console.log(this.props.data);
   }
 
   handleFilter = (filter) => {
@@ -22,17 +26,27 @@ class GallerySection extends Component {
   }
 
   render(){
+    const { data } = this.props;
+
     return(
       <div className="container-fullWidth gallery-container">
-        <h1 className="light">Gallery</h1>
         <div className="row">
-          <div className="column colmd-4"><GalleryFilter data={this.state.data}
-            filter={this.handleFilter}/></div>
-          <div className="column colmd-8"><Gallery data={this.state.data} filter={this.state.filter}/></div>
+          <div className="column colmd-4"></div>
+          <div className="column colmd-8">
+            <h1 className="light">Gallery</h1>
+          </div>
+        </div>
+        <div className="row">
+          <div className="column colmd-4"><GalleryFilter data={data} filter={this.handleFilter} name={this.props.name}/></div>
+          <div className="column colmd-8"><Gallery name={this.props.name} data={data} filter={this.state.filter}/></div>
         </div>
       </div>
     );
   }
  }
 
- export default GallerySection;
+
+function mapStateToProps({ data }) {
+  return { data };
+}
+ export default connect(mapStateToProps, { fetchGallerys })(GallerySection);
