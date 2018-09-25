@@ -38,7 +38,7 @@ class GallerySection extends Component {
         </div>
         <div className="row">
           <div className="column colmd-4"><GalleryFilter data={data} filter={this.handleFilter} name={this.props.name}/></div>
-          <div className="column colmd-8"><Gallery name={this.props.name} data={data} filter={this.state.filter}/></div>
+          <div className="column colmd-7"><Gallery name={this.props.name} data={data} filter={this.state.filter}/></div>
         </div>
       </div>
     );

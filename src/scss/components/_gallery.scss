@@ -9,7 +9,7 @@
   height: auto;
   background-color: $color-secondary;
   border-radius: 8px;
-  padding: 5px;
+  padding: 3px;
 }
 
 .gallery-item{
@@ -18,15 +18,95 @@
   background-color: #ebebeb;
   border-radius: 8px;
   overflow: hidden;
+  transition: 300ms;
+  &:after {
+    pointer-events: none;
+    content: "+";
+    display: block;
+    position: absolute;
+    font-family: $font-primary;
+    font-size: 50px !important;
+    color: black;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    top: 45%;
+    opacity: 0;
+  }
+  &:hover:after {
+    font-size: 50px !important;
+    opacity: 1;
+  }
 
   @include respond-to($medium) {
-    height: 300px;
+    height: 250px;
   }
   @include respond-to($large) {
-    height: 350px;
+    height: 300px;
+  }
+
+  img {
+    transition: 300ms;
+    width: 101%;
+    &:hover {
+      transform: scale(1.1);
+      transition: 300ms;
+      cursor: pointer;
+      opacity: 0.5;
+    }
   }
 }
 
 .gal-padding{
-  padding:5px;
+  padding: 3px 3px 0px 3px;
+}
+
+img.ril__image {
+  width: auto;
+  max-height: 1000px;
+}
+
+div.ril__toolbar {
+  background-color: black !important;
+  z-index: 9999 !important;
+  position: absolute !important;
+}
+
+.ReactModalPortal {
+  z-index: 9999;
+}
+
+.slick-dots {
+  bottom: -50px !important;
+  li {
+    width: 30px !important;
+    height: 30px !important;
+    &.slick-active {
+      border: 1px solid $color-primary;
+      border-radius: 100%;
+
+      button {
+        width: 30px !important;
+        height: 30px !important;
+        &:before {
+          font-size: 18px !important;
+          width: 100% !important;
+          height: 100% !important;
+          left: -1px !important;
+          top: 5px !important;
+        }
+      }
+    }
+    button {
+      width: 30px !important;
+      height: 30px !important;
+      &:before {
+        font-size: 18px !important;
+        width: 100% !important;
+        height: 100% !important;
+        top: 5px !important;
+        left: -1px !important;
+      }
+    }
+  }
 }
