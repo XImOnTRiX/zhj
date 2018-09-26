@@ -1,0 +1,22 @@
+//main: ../index.scss
+
+.scrollbox-container{
+  background-color: white;
+  border-radius: 10px;
+  height: 90vh;
+  padding: 20px 20px 10px 20px;
+  @include respond-to($medium){
+    height: 60vh;
+  }
+
+  .scrollbox{
+    overflow: scroll;
+    height: 100%;
+
+    .scrollbox-inside{
+      p{
+        line-height: 1.4rem;
+      }
+    }
+  }
+}

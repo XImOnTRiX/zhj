@@ -15,7 +15,6 @@ class GallerySection extends Component {
 
   componentDidMount() {
     this.props.fetchGallerys(`${GET_URL}/gallery?token=${GET_TOKEN}`);
-    console.log(this.props.data);
   }
 
   handleFilter = (filter) => {

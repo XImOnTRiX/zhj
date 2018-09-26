@@ -1,17 +1,18 @@
 import {
-  FETCH_GALLERY
+  FETCH_GALLERY,
+  FETCH_SCROLLBOX,
 } from '../actions/type';
 
 const initState = {
   galleries: [1,2],
   filter: '',
-  category: ''
+  category: '',
+  serviceList: { services: [] }
 }
 
 export default function(state = initState, action) {
   switch(action.type) {
     case FETCH_GALLERY:
-    console.log(state);
       return { ...state,
         galleries: action.data.entries.map((entrie) => {
           return (
@@ -19,6 +20,8 @@ export default function(state = initState, action) {
           )
         })
       };
+    case FETCH_SCROLLBOX:
+      return { ...state, serviceList: { services: action.data.services.split(',') }}
     default:
       return state;
   }
