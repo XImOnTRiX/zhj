@@ -15,7 +15,7 @@ class Services extends Component{
 
     return(
       <div>
-        <Collection data={data} title={this.props.title}/>
+        <Collection data={data} />
       </div>
     );
   }

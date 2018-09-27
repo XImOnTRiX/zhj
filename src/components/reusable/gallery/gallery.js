@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
-import { GET_URL, GET_TOKEN } from '../../../config';
+import { GET_URL, GET_TOKEN, IMAGE_PATH } from '../../../config';
 import Slider from 'react-slick';
 
 class Gallery extends Component{
@@ -15,29 +15,27 @@ class Gallery extends Component{
   }
 
   renderGallery = (data, filter, name, images) => {
-    console.log(data);
     images = images;
     return(
       data.galleries.map((gallery, i) => {
         if (gallery.title === name) {
           return(
             gallery.images.map((image, i) => {
-              console.log(image);
               if(filter === '') {
-                images.push('http://localhost' + image.path)
+                images.push(IMAGE_PATH + image.path)
                 return(
                   <div key={i} className="gal-padding">
                     <div className="gallery-item">
-                      <img onClick={() => this.setState({isOpen: true})} src={'http://localhost' + image.path} />
+                      <img lat={i} onClick={() => this.setState({isOpen: true})} src={IMAGE_PATH + image.path} />
                     </div>
                   </div>
                 );
               } else if(image.meta.category === filter) {
-                images.push('http://localhost' + image.path)
+                images.push(IMAGE_PATH + image.path)
                 return(
                   <div key={i} className="gal-padding">
                     <div className="gallery-item">
-                      <img onClick={() => this.setState({isOpen: true})} src={'http://localhost' + image.path} />
+                      <img alt={i} onClick={() => this.setState({isOpen: true})} src={IMAGE_PATH + image.path} />
                     </div>
                   </div>
                 );

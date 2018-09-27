@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
+import { IMAGE_PATH_EXTENDED } from '../../../config/';
 
 class Collection extends Component{
   renderBox = (data) => {
     console.log(data);
     return(
-      data.serviceCollection.entries.map((collect) => {
+      data.serviceCollection.entries.map((collect, i) => {
         console.log(collect);
         return(
-          <div className="colum collg-4 flex-align-center">
-            <p className="title">
-              <img src={'http://6795395e.ngrok.io/cockpit-master/storage/uploads' + collect.image.path} className="img" />
-              {collect.title}
-            </p>
-            <p className="description">
-              {collect.content}
-            </p>
+          <div key={i} className="colum collg-4 colms-6 col-12">
+            <div className="row">
+              <div className="column collg-2 colms-2 col-2">
+                <img alt={i} src={IMAGE_PATH_EXTENDED + collect.image.path} className="img" />
+              </div>
+              <div className="column collg-10 colms-10 col-10">
+                <h6>{collect.title}</h6>
+                <p>{collect.content}</p>
+              </div>
+            </div>
           </div>
         );
       })
@@ -25,7 +28,7 @@ class Collection extends Component{
     const { data } = this.props
 
     return(
-      <div className="row collection">
+      <div className="row container-big">
         {this.renderBox(data)}
       </div>
 
