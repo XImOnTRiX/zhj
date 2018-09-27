@@ -6,10 +6,11 @@
 
 ::-webkit-scrollbar {
   width: 8px;
+  background-color: #ebebeb;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-  @extend .shadow;
   background-color: $color-primary;
   border-radius: 4px;
 }

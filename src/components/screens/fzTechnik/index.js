@@ -14,11 +14,16 @@ class FzTechnikPage extends Component {
         </div>
         <div className="row">
           <div className="collg-1"></div>
-            <div className="column colmd-6 collg-5">
+            <div className="column colmd-6 collg-4">
               <p className="p">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusa
               </p>
               <ScrollBoxContainer />
+            </div>
+            <div className="column colmd-5 collg-7 justify-center align-center">
+              <h2 className="light italic">
+                test
+              </h2>
             </div>
         </div>
       </div>
