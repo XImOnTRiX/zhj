@@ -22,7 +22,7 @@ class Gallery extends Component{
         if (gallery.title === name) {
           return(
             gallery.images.map((image, i) => {
-              console.log(filter);
+              console.log(image);
               if(filter === '') {
                 images.push('http://localhost' + image.path)
                 return(

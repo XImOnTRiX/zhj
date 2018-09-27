@@ -6,14 +6,16 @@ import { GET_TOKEN, GET_URL } from '../../../config';
 
 class Services extends Component{
   componentDidMount() {
-    this.props.fetchCollectionService(`${GET_URL}/taxi?token=${GET_TOKEN}`)
+    this.props.fetchCollectionService(`${GET_URL}/serviceCollection?token=${GET_TOKEN}`)
     console.log(this.props.data);
   }
 
   render(){
+    const { data } = this.props;
+
     return(
       <div>
-        <Collection data={this.props.data}/>
+        <Collection data={data} title={this.props.title}/>
       </div>
     );
   }
