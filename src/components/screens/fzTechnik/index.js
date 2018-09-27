@@ -22,7 +22,7 @@ class FzTechnikPage extends Component {
             </div>
             <div className="column colmd-5 collg-7 justify-center align-center">
               <h2 className="light italic">
-                test
+                "Autoreparatur ist Vertrauenssache"
               </h2>
             </div>
         </div>

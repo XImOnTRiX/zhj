@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import { gps } from '../../../config/geolocation';
 
 class TaxiPage extends Component {
+  componentDidMount() {
+    gps();
+  }
+
   render() {
     return (
       <div className="container-fullWidth">
