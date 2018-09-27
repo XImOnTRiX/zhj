@@ -1,6 +1,7 @@
 import {
   FETCH_GALLERY,
   FETCH_SCROLLBOX,
+  FETCH_COLLECTION,
 } from '../actions/type';
 
 const initState = {
