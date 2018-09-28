@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { gps } from '../../../config/geolocation';
+import Services from '../../reusable/serviceCollection/index';
 
 class TaxiPage extends Component {
   componentDidMount() {
@@ -9,7 +10,8 @@ class TaxiPage extends Component {
   render() {
     return (
       <div className="container-fullWidth">
-        <h1 className="light">Unser <span className="medium">Service</span> für Sie</h1>
+        <h2 className="light container-big">Unsere <span className="medium">Leistungen</span> für Sie</h2>
+        <Services />
       </div>
     );
   }

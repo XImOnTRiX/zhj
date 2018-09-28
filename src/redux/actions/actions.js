@@ -3,6 +3,7 @@ import axios from 'axios';
 import {
   FETCH_GALLERY,
   FETCH_SCROLLBOX,
+  FETCH_COLLECTION,
 } from './type';
 
 function fetchGallery(data) {
@@ -15,6 +16,13 @@ function fetchGallery(data) {
 function fetchScrollBox(data) {
   return{
     type: FETCH_SCROLLBOX,
+    data
+  }
+}
+
+function fetchCollection(data) {
+  return{
+    type: FETCH_COLLECTION,
     data
   }
 }
@@ -41,7 +49,19 @@ function fetchGallerys(url1) {
   })
 }
 
+function fetchCollectionService(url1) {
+  return dispatch => Promise.all([
+    axios.get(url1),
+  ]).then(response => {
+    dispatch(fetchCollection(response[0].data));
+  })
+  .catch(e => {
+    return;
+  })
+}
+
 export {
   fetchGallerys,
   fetchScrollBoxService,
+  fetchCollectionService,
 }

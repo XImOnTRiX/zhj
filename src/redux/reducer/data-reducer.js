@@ -1,13 +1,15 @@
 import {
   FETCH_GALLERY,
   FETCH_SCROLLBOX,
+  FETCH_COLLECTION,
 } from '../actions/type';
 
 const initState = {
   galleries: [1,2],
   filter: '',
   category: '',
-  serviceList: { services: [] }
+  serviceList: { services: [] },
+  serviceCollection: {entries:[]},
 }
 
 export default function(state = initState, action) {
@@ -24,5 +26,10 @@ export default function(state = initState, action) {
       return { ...state, serviceList: { services: action.data.services.split(',') }}
     default:
       return state;
+
+    case FETCH_COLLECTION:
+      return { ...state,
+        serviceCollection: action.data
+      };
   }
 }
