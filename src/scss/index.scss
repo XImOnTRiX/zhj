@@ -42,3 +42,32 @@
 .pleft{
   padding-left: 30px;
 }
+
+.testcircle {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: black;
+}
+
+.wordbreak {
+  word-break: break-all;
+}
+
+
+.section-padding {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include respond-to($medium) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @include respond-to($medium-large) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  @include respond-to($large) {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+}
