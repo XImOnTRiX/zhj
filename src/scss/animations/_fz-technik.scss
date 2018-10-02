@@ -1,0 +1,152 @@
+// main: ../index.scss
+
+#Ebene_1 {
+  display: block;
+  position: relative;
+  width: 100%;
+  pointer-events: none;
+}
+
+.icon-hover {
+  pointer-events: none;
+  .hover-yes {
+    path {
+      cursor: pointer;
+      pointer-events: all;
+      transition: 300ms;
+      &:hover {
+        opacity: 0.3;
+        transition: 300ms;
+      }
+    }
+  }
+}
+
+.animateStroke {
+  stroke-dasharray: 2300;
+  stroke-dashoffset: 2300;
+  animation: drawStroke 3s forwards;
+  animation-delay: 2s;
+}
+@keyframes drawStroke {
+  from {
+    stroke-dashoffset: 2300;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animateStroke2 {
+  stroke-dasharray: 4100;
+  stroke-dashoffset: 4100;
+  animation: drawStroke2 4s forwards;
+  animation-delay: 1s;
+}
+@keyframes drawStroke2 {
+  from {
+    stroke-dashoffset: 4100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+@for $i from 1 through 8 {
+  .animateStrokeIcon-#{$i} {
+    stroke-width: 2;
+    stroke: rgba(0,0,0,0.4);
+    fill: rgba(0,0,0,0) !important;
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: drawIconStroke-#{$i} 2s forwards linear;
+    animation-delay: #{$i / 4}s;
+  }
+  @keyframes drawIconStroke-#{$i} {
+    0% {
+      stroke-dashoffset: 400;
+      stroke-dasharray: 400;
+    }
+    10% {
+      stroke-width: 2;
+      stroke-dashoffset: 0;
+      stroke-dasharray: 400;
+      fill: rgba(0,0,0,0) !important;
+    }
+    100% {
+      stroke-width: 0;
+      stroke-dashoffset: 0;
+      stroke-dasharray: 400;
+      @if $i == 1 or $i == 4 or $i == 6{
+        fill: rgba(144, 144, 144, 1);
+      }
+      @if $i == 2 or $i == 5 or $i == 8 {
+        fill: rgba(255, 212, 0, 1);
+      }
+      @if $i == 3 or $i == 7 {
+        fill: rgba(119, 119, 119, 1);
+      }
+    }
+  }
+
+  .animateCircleStroke {
+    opacity: 0;
+    animation: drawCircle 2s forwards;
+    animation-delay: 3s;
+  }
+  @keyframes drawCircle {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .animateIconIcon-#{$i} {
+    opacity: 0;
+    animation: drawIcon-#{$i} 1s forwards;
+    animation-delay: #{$i / 4 + 1.5}s;
+  }
+  @keyframes drawIcon-#{$i} {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animateIconShadow-#{$i} {
+    opacity: 0 !important;
+    animation: drawShadow-#{$i} 1s forwards;
+    animation-delay: #{$i / 4 + 2}s;
+  }
+  @keyframes drawShadow-#{$i} {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.4;
+    }
+  }
+
+  .animateBigIcon-#{$i} {
+    opacity: 0;
+    animation: animateBigIcon-#{$i} 2s forwards;
+    animation-delay: #{$i / 8 + 1}s;
+  }
+  @keyframes animateBigIcon-#{$i} {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.animateText {
+  right: 0px;
+}
