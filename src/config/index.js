@@ -1,4 +1,4 @@
-const ngrokDigits = 'f027a637';
+const ngrokDigits = 'cb957d5b';
 
 export const GET_TOKEN = 'e46ed23fd5515b16f097295945dc9c';
 export const GET_TOKEN_SINGLETONS = '811bf186225df42c4ae7917e90f1fd';
