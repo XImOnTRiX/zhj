@@ -3,9 +3,9 @@
 .btn {
   @include transition();
   @extend .uppercase;
-  $padding-tb: 10px;
+  $padding-tb: 20px;
   display: inline-block;
-  padding: $padding-tb 24px;
+  padding: $padding-tb 36px;
   color: $color-primary;
   min-width: 130px;
 
