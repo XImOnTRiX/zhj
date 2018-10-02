@@ -149,7 +149,7 @@ svg {
   pointer-events: none;
 }
 
-circle {
+#circle {
   cx: 100vw;
   &.open-nav {
     animation: big 1s ease forwards;

@@ -71,3 +71,34 @@
     padding-bottom: 150px;
   }
 }
+
+
+.testhover {
+  fill: black;
+}
+
+#Ebene_1 {
+  display: block;
+  position: relative;
+  width: 100%;
+  pointer-events: none;
+}
+
+.event-on {
+
+}
+
+.icon-hover {
+  pointer-events: none;
+  .hover-yes {
+    path {
+      cursor: pointer;
+      pointer-events: all;
+      transition: 300ms;
+      &:hover {
+        opacity: 0.3;
+        transition: 300ms;
+      }
+    }
+  }
+}
