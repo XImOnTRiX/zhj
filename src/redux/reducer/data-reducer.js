@@ -2,6 +2,7 @@ import {
   FETCH_GALLERY,
   FETCH_SCROLLBOX,
   FETCH_COLLECTION,
+  FETCH_TEAM,
 } from '../actions/type';
 
 const initState = {
@@ -10,6 +11,7 @@ const initState = {
   category: '',
   serviceList: { services: [] },
   serviceCollection: {entries:[]},
+  team: {entries:[]},
 }
 
 export default function(state = initState, action) {
@@ -26,8 +28,9 @@ export default function(state = initState, action) {
       return { ...state, serviceList: { services: action.data.services.split(',') }}
     case FETCH_COLLECTION:
       return { ...state, serviceCollection: action.data };
+    case FETCH_TEAM:
+      return { ...state, team: action.data };
     default:
       return state;
-
   }
 }
