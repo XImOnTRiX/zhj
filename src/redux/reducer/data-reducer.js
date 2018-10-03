@@ -24,12 +24,10 @@ export default function(state = initState, action) {
       };
     case FETCH_SCROLLBOX:
       return { ...state, serviceList: { services: action.data.services.split(',') }}
+    case FETCH_COLLECTION:
+      return { ...state, serviceCollection: action.data };
     default:
       return state;
 
-    case FETCH_COLLECTION:
-      return { ...state,
-        serviceCollection: action.data
-      };
   }
 }

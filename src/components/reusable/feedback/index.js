@@ -1,23 +1,25 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 /* fetchFeedBackcollection -> TEST */
-import { postFeedback, fetchFeebackCollection, postFeedbackTo } from '../../../redux/actions/actions';
+import { post, fetch } from '../../../redux/actions/actions';
 /* TEST */
-import { GET_URL, GET_TOKEN } from '../../../config';
+import { GET_URL, GET_TOKEN, MASTER_KEY, SAVE_URL } from '../../../config';
 
 class FeedBack extends Component{
 
   componentDidMount() {
-    this.props.fetchFeebackCollection(`${GET_URL}/feedback?token=${GET_TOKEN}`);
+    this.props.fetch('fetch_feedback', `${GET_URL}/feedback?token=${GET_TOKEN}`);
     console.log(this.props);
   }
   render(){
-    const test = {
-      feedback: true,
+    const data = {
+      rating: true,
       comment: '3'
     }
+    const url = `${SAVE_URL}/feedback?token=${MASTER_KEY}`
+
     return(
-      <div onClick={() => this.props.postFeedbackTo(test)}>
+      <div onClick={() => this.props.post(data, url)}>
         k
       </div>
     );
@@ -27,4 +29,4 @@ class FeedBack extends Component{
 function mapStateToProps({ post }) {
   return { post };
 }
- export default connect(mapStateToProps, { postFeedback, fetchFeebackCollection, postFeedbackTo })(FeedBack);
+ export default connect(mapStateToProps, { post, fetch })(FeedBack);
