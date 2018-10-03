@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import Akku from '../../reusable/akku';
 
 class AkkuPage extends Component {
   render() {
     return (
       <div className="container-fullWidth">
-        <h1 className="light">Unser <span className="medium">Service</span> für Sie</h1>
+        <Akku />
       </div>
     );
   }
