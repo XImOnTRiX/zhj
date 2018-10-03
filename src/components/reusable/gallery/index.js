@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Gallery from './gallery';
 import GalleryFilter from './galleryFilter';
 import { connect } from 'react-redux';
-import { fetchGallerys } from '../../../redux/actions';
+import { fetch} from '../../../redux/actions';
 import { GET_TOKEN, GET_URL } from '../../../config';
 
 class GallerySection extends Component {
@@ -14,7 +14,7 @@ class GallerySection extends Component {
   }
 
   componentDidMount() {
-    this.props.fetchGallerys(`${GET_URL}/gallery?token=${GET_TOKEN}`);
+    this.props.fetch('fetch_gallery', `${GET_URL}/gallery?token=${GET_TOKEN}`);
   }
 
   handleFilter = (filter) => {
@@ -48,4 +48,4 @@ class GallerySection extends Component {
 function mapStateToProps({ data }) {
   return { data };
 }
- export default connect(mapStateToProps, { fetchGallerys })(GallerySection);
+ export default connect(mapStateToProps, { fetch })(GallerySection);
