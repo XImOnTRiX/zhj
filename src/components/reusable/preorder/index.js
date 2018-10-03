@@ -17,7 +17,7 @@ class Preorder extends Component{
     var day = date.getDay();
     var hours = date.getHours();
 
-     if ( day >= 1 &&  day <= 5 && hours >= 16 && hours <= 17){
+     if ( day >= 1 &&  day <= 5 && hours >= 8 && hours <= 17){
        window.location.href = "mailto:mail@example.org";
      }
      else {
@@ -29,7 +29,7 @@ class Preorder extends Component{
 
   togglePopUp = () => {
     if (this.state.open === true) {
-      return <PopUp />
+      return <PopUp clickEvent={this.handleClick}/>
     }
   }
 

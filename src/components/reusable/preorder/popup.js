@@ -2,7 +2,7 @@ import React from "react";
 
 export const PopUp = (props) => (
   <div>
-    <div className="popupOverlay-close" onClick={(state) => this.setState({ open: false, })}></div>
+    <div className="popupOverlay-close" onClick={props.clickEvent}></div>
     <div className="popupOverlay">
       <div className=" flexbox container-middle-small flex-align-center modal">
         {/* <div className="close"></div> */}
