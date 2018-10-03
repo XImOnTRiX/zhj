@@ -4,6 +4,9 @@ import {
   FETCH_GALLERY,
   FETCH_SCROLLBOX,
   FETCH_COLLECTION,
+  POST_FEEDBACK,
+  /* TEST */
+  FETCH_FEEDBACK,
 } from './type';
 
 function fetchGallery(data) {
@@ -23,6 +26,13 @@ function fetchScrollBox(data) {
 function fetchCollection(data) {
   return{
     type: FETCH_COLLECTION,
+    data
+  }
+}
+
+function postFeedback(data) {
+  return{
+    type: POST_FEEDBACK,
     data
   }
 }
@@ -60,8 +70,42 @@ function fetchCollectionService(url1) {
   })
 }
 
+/* TEST  */
+
+function fetchFeeback(data) {
+  return {
+    type: FETCH_FEEDBACK,
+    data
+  }
+}
+
+function postFeedbackTo(data, url) {
+  return dipatch => Promise.all([
+    axios({
+      method: 'post',
+      url: url,
+      data: data,
+    })
+  ])
+
+}
+
+function fetchFeebackCollection(url1) {
+  return dispatch => Promise.all([
+    axios.get(url1),
+  ]).then(response => {
+    dispatch(fetchFeeback(response[0].data));
+  }).catch(e => {
+    return;
+  })
+}
+
 export {
   fetchGallerys,
   fetchScrollBoxService,
   fetchCollectionService,
+  postFeedback,
+  /* TEST */
+  fetchFeebackCollection,
+  postFeedbackTo,
 }
