@@ -13,10 +13,10 @@ export class Navigation extends Component {
   }
 
   handleClick = () => {
-    this.setState({
-      open: this.state.open === true ? false : true,
+    this.setState(prevState => ({
+      open: !prevState.open,
       nav: this.state.open === true ? 'closed-nav' : 'open-nav',
-    });
+    }))
     console.log(this.state);
   }
 

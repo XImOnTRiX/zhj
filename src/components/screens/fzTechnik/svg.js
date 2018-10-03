@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import Reifen from '../../../media/grafiken/reifen.png';
-
 export class Svg extends Component {
   constructor(props) {
     super(props);

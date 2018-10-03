@@ -4,9 +4,9 @@ class ScrollBox extends Component{
   renderBox = (data) => {
     console.log(data);
     return(
-      data.serviceList.services.map((service) => {
+      data.serviceList.services.map((service, i) => {
         return(
-          <p>
+          <p key={i}>
             {service}
           </p>
         );
