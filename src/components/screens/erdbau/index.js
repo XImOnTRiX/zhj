@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FeedBack from '../../reusable/feedback';
+import { FeedBack } from '../../reusable/feedback';
 
 class ErdbauPage extends Component {
   render() {
