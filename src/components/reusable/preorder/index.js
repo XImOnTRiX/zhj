@@ -17,7 +17,7 @@ class Preorder extends Component{
     var day = date.getDay();
     var hours = date.getHours();
 
-     if ( day >= 1 &&  day <= 5 && hours >= 8 && hours <= 17){
+     if ( day >= 1 &&  day <= 5 && hours >= 9 && hours <= 17){
        window.location.href = "mailto:mail@example.org";
      }
      else {
