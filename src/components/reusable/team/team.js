@@ -10,11 +10,11 @@ class Team extends Component{
         return(
           <div key={i} className="colum collg-2 colms-4 col-12">
             <div className="row">
-              <div className="column collg-6 colms-6 col-6">
+              <div className="column collg-6 colms-6 col-6 flex-align-center">
                 <img alt={i} src={IMAGE_PATH_EXTENDED + collect.image.path} className="images" />
               </div>
             </div>
-            <div className="column collg-10 colms-10 col-10">
+            <div className="column collg-10 colms-10 col-10 flex-align-center">
               <h6>{collect.title}</h6>
             </div>
           </div>

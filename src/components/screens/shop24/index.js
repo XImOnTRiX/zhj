@@ -5,7 +5,7 @@ class Shop24Page extends Component {
   render() {
     return (
       <div className="container-fullWidth">
-        <Preorder />
+        <Preorder title="Jetzt Vorbestellen" text="Lorem ipsum" time={true} />
       </div>
     );
   }

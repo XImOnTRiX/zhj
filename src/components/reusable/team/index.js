@@ -14,11 +14,10 @@ class OurTeam extends Component{
     const { data } = this.props;
 
     return(
-        <div>
+        <div className="section-padding container-big">
           <div className="row">
-            <div className="collg-1"></div>
             <div className="column">
-              <h2 className="light pleft">Unser <span className="medium">Team</span></h2>
+              <h2 className="light align-left">Unser <span className="medium">Team</span></h2>
             </div>
           </div>
           <div>
