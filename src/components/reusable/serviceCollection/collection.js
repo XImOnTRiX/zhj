@@ -8,12 +8,12 @@ class Collection extends Component{
       data.serviceCollection.entries.map((collect, i) => {
         console.log(collect);
         return(
-          <div key={i} className="colum collg-4 colms-6 col-12">
+          <div key={i} className="colum collg-4 colms-6 colz-12">
             <div className="row">
-              <div className="column collg-2 colms-2 col-2">
+              <div className="column collg-2 colms-2 colz-2">
                 <img alt={i} src={IMAGE_PATH_EXTENDED + collect.image.path} className="img" />
               </div>
-              <div className="column collg-10 colms-10 col-10">
+              <div className="column collg-10 colms-10 colz-10">
                 <h6>{collect.title}</h6>
                 <p>{collect.content}</p>
               </div>

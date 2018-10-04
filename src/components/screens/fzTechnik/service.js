@@ -19,7 +19,7 @@ export const ServiceList = (props) => (
         </div>
         <div className="column colmd-5 collg-7 justify-center align-center">
           <h2 className="light italic">
-            "Autoreparatur ist Vertrauenssache"
+            "Autoreparatur ist <span className="medium">Vertrauens</span>sache"
           </h2>
         </div>
     </div>

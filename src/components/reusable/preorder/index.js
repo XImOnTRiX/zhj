@@ -17,7 +17,7 @@ class Preorder extends Component{
     var day = date.getDay();
     var hours = date.getHours();
 
-     if ( day >= 1 &&  day <= 5 && hours >= 9 && hours <= 17){
+     if ( day >= 1 && day <= 5 && hours >= 10 && hours <= 17){
        window.location.href = "mailto:mail@example.org";
      }
      else {
@@ -36,20 +36,20 @@ class Preorder extends Component{
   render(){
     return(
       <div className="container-middle-big">
-            <h1 className="light align-center">
-                {this.title}
-            </h1>
+        <h1 className="light align-center">
+          {this.title}
+        </h1>
 
         <div className="row container">
-            <p className="text align-center">
-              {this.text}
-            </p>
+          <p className="text align-center">
+            {this.text}
+          </p>
         </div>
 
         <div className="row container justify-center">
-            <button onClick={this.handleClick} className="btn-border-rounded-full orderButton">
-              jetzt Bestellen
-            </button>
+          <button onClick={this.handleClick} className="btn-border-rounded-full orderButton">
+            jetzt Bestellen
+          </button>
           {this.togglePopUp()}
         </div>
       </div>
