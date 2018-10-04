@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { post, fetch } from '../../../redux/actions/actions';
 import { GET_URL, GET_TOKEN, MASTER_KEY, SAVE_URL } from '../../../config';
+import { Rating } from './rating';
+import { Comment } from './comment';
 
 class PopUp extends Component{
   // componentDidMount() {
@@ -17,7 +19,10 @@ class PopUp extends Component{
 
     return(
       <div className="feedback">
-
+        <h5 className="light">Berwertung</h5>
+        <Rating />
+        <Comment />
+        <button className="feedback-form">Senden</button>
       </div>
     );
   }

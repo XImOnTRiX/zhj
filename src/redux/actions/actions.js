@@ -8,11 +8,13 @@ function determine(type, data) {
   }
 }
 
+//var promises = Array.isArray(url) ? url.map(singleUrl => axios.get(singleUrl)) : axios.get(url);
+
 function fetch(type, url) {
-  return dispatch => Promise.all([
-    axios.get(url),
-  ]).then(response => {
-    dispatch(determine(type, response[0].data));
+  return dispatch =>
+  axios.get(url)
+  .then(response => {
+    dispatch(determine(type, response.data));
   })
   .catch(e => {
     return;
