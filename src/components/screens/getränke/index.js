@@ -5,7 +5,7 @@ class GetränkePage extends Component {
   render() {
     return (
       <div className="container-fullWidth">
-        <OurTeam />
+        
       </div>
     );
   }

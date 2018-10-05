@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-
+import LandingPage from '../../screens/landingPage';
 import TaxiPage from '../../screens/taxi';
 import FzTechnikPage from '../../screens/fzTechnik';
 import GetränkePage from '../../screens/getränke';
@@ -16,6 +16,7 @@ import { url } from './url';
 export const Main = () => (
   <main>
     <Switch>
+      <Route exact path='/' component={LandingPage} />
       <Route path={url[0]} component={TaxiPage} />
       <Route path={url[1]} component={FzTechnikPage} />
       <Route path={url[2]} component={GetränkePage} />
