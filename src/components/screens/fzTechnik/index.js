@@ -17,7 +17,10 @@ class FzTechnikPage extends Component {
         <ZahlungsModalitäten />
         <GallerySection name="Fahrzeugtechnik"/>
         <OurTeam />
-        <Preorder button="Kontakt" title="Kontaktieren Sie uns" text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy" time={false} />
+        <Preorder
+          button="Kontakt" 
+          title="Kontaktieren Sie uns"
+          text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy" time={false} />
       </div>
     );
   }

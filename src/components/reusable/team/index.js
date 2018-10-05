@@ -15,14 +15,8 @@ class OurTeam extends Component{
 
     return(
         <div className="section-padding container-big">
-          <div className="row">
-            <div className="column">
-              <h2 className="light align-left">Unser <span className="medium">Team</span></h2>
-            </div>
-          </div>
-          <div>
-            <Team data={data} />
-          </div>
+          <h2 className="light align-left">Unser <span className="medium">Team</span></h2>
+          <Team data={data} />
         </div>
     );
   }

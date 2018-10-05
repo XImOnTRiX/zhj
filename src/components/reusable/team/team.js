@@ -8,14 +8,12 @@ class Team extends Component{
       data.team.entries.map((collect, i) => {
         console.log(collect);
         return(
-          <div key={i} className="colum collg-2 colms-4 col-12">
-            <div className="row">
-              <div className="column collg-6 colms-6 col-6 flex-align-center">
+          <div key={i} className="colum collg-2 colms-4 colz-12">
+            <div className="row flex-align-center">
+              <div className="column colz-12 flex-align-center">
                 <img alt={i} src={IMAGE_PATH_EXTENDED + collect.image.path} className="images" />
+                <h6 className="align-center">{collect.title}</h6>
               </div>
-            </div>
-            <div className="column collg-10 colms-10 col-10 flex-align-center">
-              <h6>{collect.title}</h6>
             </div>
           </div>
         );
@@ -27,7 +25,7 @@ class Team extends Component{
     const { data } = this.props
 
     return(
-      <div className="row container-big">
+      <div className="row">
         {this.renderBox(data)}
       </div>
 

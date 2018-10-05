@@ -47,38 +47,25 @@ class Preorder extends Component{
   render(){
     return(
       <div className="container-middle-big">
-            <h1 className="light align-center">
-                {this.props.title}
-            </h1>
-
-        <div className="row container">
-            <p className="text align-center">
-              {this.props.text}
-            </p>
-        </div>
-
-        <div className="row container justify-center">
-            <button onClick={this.handleClick} className="btn-border-rounded-full orderButton">
-              {this.props.button}
-            </button>
         <h1 className="light align-center">
-          {this.title}
+          {this.props.title}
         </h1>
 
         <div className="row container">
           <p className="text align-center">
-            {this.text}
+            {this.props.text}
           </p>
         </div>
 
         <div className="row container justify-center">
           <button onClick={this.handleClick} className="btn-border-rounded-full orderButton">
-            jetzt Bestellen
+            {this.props.button}
           </button>
-          {this.togglePopUp()}
+          <div className="row container justify-center">
+            {this.togglePopUp()}
+          </div>
         </div>
       </div>
-    </div>
     );
   }
 }
