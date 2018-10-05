@@ -9,9 +9,24 @@ const initState = {
   galleries: [1,2],
   filter: '',
   category: '',
-  serviceList: { services: [] },
+  serviceList: {
+    services: [
+      '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1',
+    ],
+    exo: true
+  },
   serviceCollection: {entries:[]},
-  team: {entries:[]},
+  team: {
+    entries: [
+      {title: '1', image: ''},
+      {title: '1', image: ''},
+      {title: '1', image: ''},
+      {title: '1', image: ''},
+      {title: '1', image: ''},
+      {title: '1', image: ''},
+    ],
+    exo: true
+  },
 }
 
 export default function(state = initState, action) {
@@ -25,7 +40,7 @@ export default function(state = initState, action) {
         })
       };
     case FETCH_SCROLLBOX:
-      return { ...state, serviceList: { services: action.data.services.split(',') }}
+      return { ...state, serviceList: { services: action.data.services.split(',') }, exo: false }
     case FETCH_COLLECTION:
       return { ...state, serviceCollection: action.data };
     case FETCH_TEAM:

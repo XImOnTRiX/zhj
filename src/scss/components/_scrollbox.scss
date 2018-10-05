@@ -1,21 +1,48 @@
 //main: ../index.scss
 
-.scrollbox-container{
+.scrollbox-container {
   background-color: white;
   border-radius: 10px;
   height: 90vh;
   padding: 20px 20px 10px 20px;
-  @include respond-to($medium){
+  @include respond-to($medium) {
     height: 60vh;
   }
 
-  .scrollbox{
+  .scrollbox {
     overflow-y: scroll;
     height: 100%;
 
-    .scrollbox-inside{
-      p{
+    .scrollbox-inside {
+      p {
         line-height: 1.4rem;
+      }
+    }
+  }
+
+  &.exo {
+    background-color: white;
+    border-radius: 10px;
+    height: 90vh;
+    padding: 20px 20px 10px 20px;
+    @include respond-to($medium) {
+      height: 60vh;
+    }
+
+    .scrollbox {
+      overflow-y: scroll;
+      height: 100%;
+
+      .scrollbox-inside {
+        p {
+          line-height: 1.4rem;
+          background-color: #cbcbcb;
+          margin-top: 5px;
+          margin-right: 10px;
+          margin-bottom: 10px;
+          height: 20px;
+          color: #cbcbcb;
+        }
       }
     }
   }

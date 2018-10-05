@@ -3,10 +3,8 @@ import { IMAGE_PATH_EXTENDED } from '../../../config/';
 
 class Team extends Component{
   renderBox = (data) => {
-    console.log(data);
     return(
       data.team.entries.map((collect, i) => {
-        console.log(collect);
         return(
           <div key={i} className="colum collg-2 colms-4 colz-12">
             <div className="row flex-align-center">
@@ -25,7 +23,7 @@ class Team extends Component{
     const { data } = this.props
 
     return(
-      <div className="row">
+      <div className="row ">
         {this.renderBox(data)}
       </div>
 
