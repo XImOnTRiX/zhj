@@ -37,24 +37,19 @@
         margin: auto;
         height: 80px;
         background-color: $color-secondary;
-        box-shadow: inset 0px 0px 400px rgba(0,0,0,0.2);
       }
       .good {
-        border-bottom: 2px solid white;
         transition: 300ms;
         &:hover {
           color: white;
-          border-bottom: 2px solid green;
           transition: 300ms;
           cursor: pointer;
         }
       }
       .bad {
-        border-bottom: 2px solid white;
         transition: 300ms;
         &:hover {
           color: white;
-          border-bottom: 2px solid red;
           transition: 300ms;
           cursor: pointer;
         }

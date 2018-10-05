@@ -2,6 +2,7 @@ import axios from 'axios';
 
 
 function determine(type, data) {
+  console.log(data);
   return{
     type,
     data
@@ -22,16 +23,17 @@ function fetch(type, url) {
 }
 
 function post(data, url) {
-  return dipatch => Promise.all([
-    axios.post( url, {
-      data
-    }).then(
-      response => console.log(response)
-    )
-  ])
+  return dispatch =>
+  axios.post( url, {
+    data
+  }).then(
+    response => console.log(response)
+  )
 }
+
 
 export {
   fetch,
   post,
+  determine,
 }
