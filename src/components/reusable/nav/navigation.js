@@ -4,6 +4,11 @@ import { NavLink } from 'react-router-dom';
 import { url } from './url';
 
 import Taxi from '../../../media/logos/Taxi.png';
+import Technik from '../../../media/logos/fzTechnik.png';
+import Getränke from '../../../media/logos/getränke.png';
+import Akku from '../../../media/logos/akku.png';
+import Erdbau from '../../../media/logos/erdbau.png';
+import Shop from '../../../media/logos/shop.png';
 
 
 export class Navigation extends Component {
@@ -84,19 +89,19 @@ export class Navigation extends Component {
           <img className={"nav-image-1 " + this.state.nav} src={Taxi} />
         </div>
         <div className="path-container">
-          <img className={"nav-image-2 " + this.state.nav} src={Taxi} />
+          <img className={"nav-image-2 " + this.state.nav} src={Technik} />
         </div>
         <div className="path-container">
-          <img className={"nav-image-3 " + this.state.nav} src={Taxi} />
+          <img className={"nav-image-3 " + this.state.nav} src={Getränke} />
         </div>
         <div className="path-container">
-          <img className={"nav-image-4 " + this.state.nav} src={Taxi} />
+          <img className={"nav-image-4 " + this.state.nav} src={Akku} />
         </div>
         <div className="path-container">
-          <img className={"nav-image-5 " + this.state.nav} src={Taxi} />
+          <img className={"nav-image-5 " + this.state.nav} src={Erdbau} />
         </div>
         <div className="path-container">
-          <img className={"nav-image-6 " + this.state.nav} src={Taxi} />
+          <img className={"nav-image-6 " + this.state.nav} src={Shop} />
         </div>
 
       </div>

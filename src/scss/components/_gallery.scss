@@ -78,6 +78,7 @@ div.ril__toolbar {
 
 .slick-dots {
   bottom: -50px !important;
+  z-index: 99;
   li {
     width: 30px !important;
     height: 30px !important;
