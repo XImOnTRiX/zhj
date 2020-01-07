@@ -18,5 +18,14 @@
   &-tertiary {
     @extend .card;
     background-color: $color-tertiary;
+    color: white;
   }
+}
+
+.flat-icon {
+  width: 50px;
+  height: 50px;
+  right: 5px;
+  top: 10px;
+  position: absolute;
 }

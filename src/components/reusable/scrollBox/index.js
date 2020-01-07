@@ -7,7 +7,6 @@ import { GET_TOKEN_SINGLETONS, GET_URL_SINGLETONS } from '../../../config';
 class ScrollBoxContainer extends Component{
   componentDidMount() {
     this.props.fetch('fetch_scrollbox', `${GET_URL_SINGLETONS}/FzService?token=${GET_TOKEN_SINGLETONS}`)
-    console.log(this.props.data);
   }
 
   render(){

@@ -2,7 +2,6 @@ import axios from 'axios';
 
 
 function determine(type, data) {
-  console.log(data);
   return{
     type,
     data
@@ -26,9 +25,7 @@ function post(data, url) {
   return dispatch =>
   axios.post( url, {
     data
-  }).then(
-    response => console.log(response)
-  )
+  })
 }
 
 

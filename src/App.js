@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 
 import { Navigation } from './components/reusable/nav/navigation';
 import { Main } from './components/reusable/nav/main';
-import Footer from './components/reusable/footer';
-
-import { Btn } from './components/reusable/btn';
 
 class App extends Component {
   render() {
@@ -12,8 +9,6 @@ class App extends Component {
       <div className="App">
         <Navigation />
         <Main />
-
-
       </div>
     );
   }

@@ -3,10 +3,8 @@ import { IMAGE_PATH_EXTENDED } from '../../../config/';
 
 class Collection extends Component{
   renderBox = (data) => {
-    console.log(data);
     return(
       data.serviceCollection.entries.map((collect, i) => {
-        console.log(collect);
         return(
           <div key={i} className="colum collg-4 colms-6 colz-12">
             <div className="row">

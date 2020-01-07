@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import Team from './team';
 import { GET_TOKEN, GET_URL } from '../../../config';
 
+import Fade from 'react-reveal/Fade';
+
 class OurTeam extends Component{
   componentDidMount() {
     this.props.fetch('fetch_team', `${GET_URL}/team?token=${GET_TOKEN}`)
@@ -11,10 +13,11 @@ class OurTeam extends Component{
 
   render(){
     const { data } = this.props;
-
     return(
-      <div className="section-padding container-big">
-        <h2 className="light align-left">Unser <span className="medium">Team</span></h2>
+      <div className="pt pb container-big">
+        <Fade bottom>
+          <h2 className="light align-left container-big align-center">Unser <span className="medium">Team</span></h2>
+        </Fade>
         <Team data={data} />
       </div>
     );

@@ -1,0 +1,20 @@
+//main: ../index.scss
+
+.logos{
+  width: 100%;
+  height: auto;
+}
+
+.sppt {
+  top: 50px;
+}
+
+.sp-icon-container {
+  z-index: 3;
+  @include respond-to($medium) {
+    margin-top: -200px;
+  }
+  @include respond-to($large) {
+    margin-top: -250px;
+  }
+}

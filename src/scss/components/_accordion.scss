@@ -1,0 +1,53 @@
+// main: ../index.scss
+
+.accordion {
+  width: 100%;
+
+  .accordion-panel {
+    .panel {
+      &-content {
+        overflow: hidden;
+        height: auto;
+        pointer-events: none;
+      }
+
+      &-open {
+        transition: 500ms;
+      }
+
+      &-close {
+        max-height: 0px !important;
+        transition: 500ms;
+      }
+    }
+  }
+}
+
+.header {
+  &-close {
+    &:after {
+      content: "+";
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 16pt;
+      font-weight: 400;
+      color: black;
+      transition: 200ms;
+    }
+  }
+  &-open {
+    &:after {
+      content: "-";
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 16pt;
+      font-weight: 400;
+      color: black;
+      transition: 200ms;
+    }
+  }
+}

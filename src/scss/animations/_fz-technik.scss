@@ -25,6 +25,9 @@
 .animateStroke {
   stroke-dasharray: 2300;
   stroke-dashoffset: 2300;
+  -webkit-animation: drawStroke 3s forwards;
+  -moz-animation: drawStroke 3s forwards;
+  -o-animation: drawStroke 3s forwards;
   animation: drawStroke 3s forwards;
   animation-delay: 2s;
 }
@@ -40,6 +43,9 @@
 .animateStroke2 {
   stroke-dasharray: 4100;
   stroke-dashoffset: 4100;
+  -webkit-animation: drawStroke2 4s forwards;
+  -moz-animation: drawStroke2 4s forwards;
+  -o-animation: drawStroke2 4s forwards;
   animation: drawStroke2 4s forwards;
   animation-delay: 1s;
 }
@@ -60,6 +66,9 @@
     fill: rgba(0,0,0,0) !important;
     stroke-dasharray: 400;
     stroke-dashoffset: 400;
+    -webkit-animation: drawIconStroke-#{$i} 2s forwards linear;
+    -moz-animation: drawIconStroke-#{$i} 2s forwards linear;
+    -o-animation: drawIconStroke-#{$i} 2s forwards linear;
     animation: drawIconStroke-#{$i} 2s forwards linear;
     animation-delay: #{$i / 4}s;
   }
@@ -92,6 +101,9 @@
 
   .animateCircleStroke {
     opacity: 0;
+    -webkit-animation: drawCircle 2s forwards;
+    -moz-animation: drawCircle 2s forwards;
+    -o-animation: drawCircle 2s forwards;
     animation: drawCircle 2s forwards;
     animation-delay: 3s;
   }
@@ -106,6 +118,9 @@
 
   .animateIconIcon-#{$i} {
     opacity: 0;
+    -webkit-animation: drawIcon-#{$i} 1s forwards;
+    -moz-animation: drawIcon-#{$i} 1s forwards;
+    -o-animation: drawIcon-#{$i} 1s forwards;
     animation: drawIcon-#{$i} 1s forwards;
     animation-delay: #{$i / 4 + 1.5}s;
   }
@@ -120,6 +135,9 @@
 
   .animateIconShadow-#{$i} {
     opacity: 0 !important;
+    -webkit-animation: drawShadow-#{$i} 1s forwards;
+    -moz-animation: drawShadow-#{$i} 1s forwards;
+    -o-animation: drawShadow-#{$i} 1s forwards;
     animation: drawShadow-#{$i} 1s forwards;
     animation-delay: #{$i / 4 + 2}s;
   }
@@ -134,16 +152,15 @@
 
   .animateBigIcon-#{$i} {
     opacity: 0;
+    -webkit-animation: animateBigIcon-#{$i} 2s forwards;
+    -moz-animation: animateBigIcon-#{$i} 2s forwards;
+    -o-animation: animateBigIcon-#{$i} 2s forwards;
     animation: animateBigIcon-#{$i} 2s forwards;
     animation-delay: #{$i / 8 + 1}s;
   }
   @keyframes animateBigIcon-#{$i} {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+    from {opacity: 0;}
+    to {opacity: 1;}
   }
 }
 

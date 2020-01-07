@@ -7,7 +7,6 @@ import { GET_TOKEN, GET_URL } from '../../../config';
 class Services extends Component{
   componentDidMount() {
     this.props.fetch('fetch_collection', `${GET_URL}/serviceCollection?token=${GET_TOKEN}`)
-    console.log(this.props.data);
   }
 
   render(){

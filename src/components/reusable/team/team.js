@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
-import { IMAGE_PATH_EXTENDED } from '../../../config/';
+import Fade from 'react-reveal/Fade';
+
+import { IMAGE_PATH } from '../../../config/';
 
 class Team extends Component{
   renderBox = (data) => {
     return(
-      data.team.entries.map((collect, i) => {
+      data.team.entries.map((data, i) => {
         return(
-          <div key={i} className="colum collg-2 colms-4 colz-12">
-            <div className="row flex-align-center">
-              <div className="column colz-12 flex-align-center">
-                <img alt={i} src={IMAGE_PATH_EXTENDED + collect.image.path} className="images" />
-                <h6 className="align-center">{collect.title}</h6>
+          <Fade key={i} bottom>
+            <div className="colum collg-3 colms-4 colz-12">
+              <div className="row flex-align-center">
+                <div className="column colz-12 flex-align-center nop">
+                  <img alt={i} src={IMAGE_PATH + data.image.path} className="images" />
+                  <div className="container-fullWidth">
+                    <p className="regular medium bigger">{data.name}</p>
+                    <p dangerouslySetInnerHTML={{__html: data.description}}></p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </Fade>
         );
       })
     );
@@ -26,7 +33,6 @@ class Team extends Component{
       <div className="row ">
         {this.renderBox(data)}
       </div>
-
     );
   }
 }

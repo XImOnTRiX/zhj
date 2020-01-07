@@ -1,1 +1,1 @@
-export const url = ['/taxi', '/werkstatt', '/getränkehandel', '/akkufirma', '/erdbau', '/shop24',];
+export const url = ['/fahrzeugtechnik', '/autohandel', '/autovermietung', '/taxi', '/erdbau', '/über-uns',];

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Fade from 'react-reveal/Fade';
+
 import Gallery from './gallery';
 import GalleryFilter from './galleryFilter';
 import { connect } from 'react-redux';
@@ -18,7 +20,6 @@ class GallerySection extends Component {
   }
 
   handleFilter = (filter) => {
-    console.log(filter);
     this.setState({
       filter: filter
     })
@@ -28,17 +29,22 @@ class GallerySection extends Component {
     const { data } = this.props;
 
     return(
-      <div className="container-fullWidth gallery-container">
+      <div className="container-fullWidth pb pt">
         <div className="row">
           <div className="column colmd-4"></div>
           <div className="column colmd-8">
-            <h1 className="light">Gallery</h1>
+            <Fade bottom>
+              <h1 className="light">Galerie</h1>
+            </Fade>
           </div>
         </div>
-        <div className="row">
-          <div className="column colmd-4"><GalleryFilter data={data} filter={this.handleFilter} name={this.props.name}/></div>
-          <div className="column colmd-7"><Gallery name={this.props.name} data={data} filter={this.state.filter}/></div>
-        </div>
+        <Fade bottom>
+          <div className="row">
+            <div className="colmd-1"></div>
+            <div className="column colmd-3"><GalleryFilter data={data} filter={this.handleFilter} name={this.props.name} filterName={this.state.filter}/></div>
+            <div className="column colmd-7"><Gallery name={this.props.name} data={data} filter={this.state.filter}/></div>
+          </div>
+        </Fade>
       </div>
     );
   }

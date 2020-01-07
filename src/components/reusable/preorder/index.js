@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Fade from 'react-reveal/Fade';
+
 import { PopUp } from './popup';
 
 class Preorder extends Component{
@@ -11,31 +13,32 @@ class Preorder extends Component{
 
 
   handleClick = () => {
-    var date = new Date();
-    var day = date.getDay();
-    var hours = date.getHours();
-
-    if ( this.props.time === true ){
-      if ( day >= 1 &&  day <= 5 && hours >= 9 && hours <= 17){
-        window.location.href = "mailto:mail@example.org";
-      }
-      else {
-        this.setState({
-          open: !this.state.open,
-        })
-      }
-    }
-    else {
-      window.location.href = "mailto:mail@example.org";
-    }
-     if ( day >= 1 && day <= 5 && hours >= 10 && hours <= 17){
-       window.location.href = "mailto:mail@example.org";
-     }
-     else {
-       this.setState({
-         open: !this.state.open,
-       })
-     }
+    window.location.href = "mailto:office@zhj.at";
+    // var date = new Date();
+    // var day = date.getDay();
+    // var hours = date.getHours();
+    //
+    // if ( this.props.time === true ){
+    //   if ( day >= 1 &&  day <= 5 && hours >= 9 && hours <= 17){
+    //     window.location.href = "mailto:mail@example.org";
+    //   }
+    //   else {
+    //     this.setState({
+    //       open: !this.state.open,
+    //     })
+    //   }
+    // }
+    // else {
+    //   window.location.href = "mailto:mail@example.org";
+    // }
+    //  if ( day >= 1 && day <= 5 && hours >= 10 && hours <= 17){
+    //    window.location.href = "mailto:mail@example.org";
+    //  }
+    //  else {
+    //    this.setState({
+    //      open: !this.state.open,
+    //    })
+    //  }
   }
 
   togglePopUp = () => {
@@ -46,21 +49,26 @@ class Preorder extends Component{
 
   render(){
     return(
-      <div className="container-middle-big">
-        <h1 className="light align-center">
-          {this.props.title}
-        </h1>
-
+      <div className="pt">
+        <Fade bottom>
+          <h1 className="light align-center">
+            {this.props.title}
+          </h1>
+        </Fade>
         <div className="row container">
-          <p className="text align-center">
-            {this.props.text}
-          </p>
+          <Fade bottom>
+            <p className="text align-center">
+              {this.props.text}
+            </p>
+          </Fade>
         </div>
 
         <div className="row container justify-center">
-          <button onClick={this.handleClick} className="btn-border-rounded-full orderButton">
-            {this.props.button}
-          </button>
+          <Fade bottom>
+            <button onClick={this.handleClick} className="btn-border-rounded-full orderButton">
+              {this.props.button}
+            </button>
+          </Fade>
           <div className="row container justify-center">
             {this.togglePopUp()}
           </div>

@@ -3,15 +3,16 @@
 .btn {
   @include transition();
   @extend .uppercase;
-  $padding-tb: 20px;
+  $padding-tb: 10px;
   display: inline-block;
   padding: $padding-tb 36px;
-  color: $color-primary;
+  color: $color-tertiary;
   min-width: 130px;
+  cursor: pointer;
 
   &-border {
     @extend .btn;
-    $border: 2px solid $color-primary;
+    $border: 2px solid $color-tertiary;
     border: $border;
     background-color: transparent;
 
@@ -23,9 +24,16 @@
     &-rounded-full {
       @extend .btn-border;
       border-radius: ($padding-tb) * 2 + $font-size;
+
+      &-inverse {
+        @extend .btn-border;
+        border-radius: ($padding-tb) * 2 + $font-size;
+        background-color: $color-secondary;
+        color: $color-primary;
+      }
     }
     &:hover {
-      background-color: $color-secondary;
+      background-color: $color-tertiary;
       color: white;
     }
   }

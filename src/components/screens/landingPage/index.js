@@ -1,67 +1,158 @@
 import React, { Component } from 'react';
 
-import { NavLink } from 'react-router-dom';
-import { url } from '../../reusable/nav/url.js';
+import { Helmet } from 'react-helmet';
 
-import Taxi from '../../../media/logos/Taxi.png';
-import Akku from '../../../media/logos/akku.png';
+// import { NavLink } from 'react-router-dom';
+// import { url } from '../../reusable/nav/url.js';
+
+import Autovermietung from '../../../media/logos/autovermietung.png';
+import Autohandel from '../../../media/logos/autohandel.png';
 import Erdbau from '../../../media/logos/erdbau.png';
 import Technik from '../../../media/logos/fzTechnik.png';
-import Getränke from '../../../media/logos/getränke.png';
-import Shop from '../../../media/logos/shop.png';
+import Taxi from '../../../media/logos/Taxi.png';
+import About from '../../../media/logos/about.png';
+
+import BgImage from '../../../media/images/bgCar2.jpg';
+
+import Header from '../../reusable/header';
+import Preorder from '../../reusable/preorder';
+import { Btn } from '../../reusable/btn';
+import OurTeam from '../../reusable/team';
+import GallerySection from '../../reusable/gallery';
+
+import { NavLink } from 'react-router-dom';
+
+import Fade from 'react-reveal/Fade';
 
 class LandingPage extends Component {
+  componentDidMount() {
+    console.log(window.location);
+    if(this.props.history.action === "PUSH") {
+      setTimeout(() => {
+        window.scrollTo(0,1);
+      },500)
+    }
+  }
+
+  renderIcons = (iconArray) => {
+    const url = ['/fahrzeugtechnik', '/autohandel', '/autovermietung', '/taxi', '/erdbau', '/über-uns',];
+    return iconArray.map((data, i) => {
+      return (
+        <div key={i} className="colz-4 collg-2">
+          <NavLink to={url[i]}>
+            <img alt="" src={data} />
+          </NavLink>
+        </div>
+      )
+    })
+  }
+
+  scrolling = () => {
+    window.scrollBy({ top: 700, left: 0, behavior: "smooth" });
+  }
+
   render(){
-    return(
-      <div className="container-big flex-align-center justify-center sppt">
-        <div className="row">
-          <div className="colmd-4">
-            <h2 className="light">Was es alles gibt</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
-            </p>
-          </div>
-          <div className="colmd-8">
-            <div className="row">
-              <div className="collg-4 colmd-6 colz-6">
-                <NavLink
-                  onClick={this.handleClick}
-                  to={url[0]}><img src={Taxi} class="logos" />
-                </NavLink>
-              </div>
-              <div className="collg-4 colmd-6 colz-6">
-                <NavLink
-                  onClick={this.handleClick}
-                  to={url[1]}><img src={Technik} class="logos" />
-                </NavLink>
-              </div>
-              <div className="collg-4 colmd-6 colz-6">
-                <NavLink
-                  onClick={this.handleClick}
-                  to={url[2]}><img src={Getränke} class="logos" />
-                </NavLink>
-              </div>
-              <div className="collg-4 colmd-6 colz-6">
-                <NavLink
-                  onClick={this.handleClick}
-                  to={url[3]}><img src={Akku} class="logos" />
-                </NavLink>
-              </div>
-              <div className="collg-4 colmd-6 colz-6">
-                <NavLink
-                  onClick={this.handleClick}
-                  to={url[4]}><img src={Erdbau} class="logos" />
-                </NavLink>
-              </div>
-              <div className="collg-4 colmd-6 colz-6">
-                <NavLink
-                  onClick={this.handleClick}
-                  to={url[5]}><img src={Shop} class="logos" />
-                </NavLink>
-              </div>
+    const iconArray = [Technik, Autohandel, Autovermietung, Taxi, Erdbau, About];
+
+    return (
+      <div className="smothscroll">
+        <Helmet>
+          <title>Home & Über uns - ZHJ</title>
+          <meta
+            name="description"
+            content="Wir bieten eine vielzal an Dienstleistungen an. Wir führen ein Taxiunternehmen, haben einen KFZ-meisterbetrieb, verkaufen und vermieten Fahrzeuge, bieten Erdbauarbauarbeiten an und Minibaggerverleih."
+          />
+          <meta name="subject" content="Die Firma ZHJ" />
+
+          <meta name="og:title" content="ZHJ | Home & Über uns" />
+          <meta name="og:type" content="Website" />
+          <meta name="og:url" content="https://www.zhj.at/" />
+          <meta name="og:image" content="https://www.zhj.at/xyz" />
+          <meta name="og:site_name" content="Home & Über uns - ZHJ" />
+          <meta
+            name="og:description"
+            content="Wir bieten eine vielzal an Dienstleistungen an. Wir führen ein Taxiunternehmen, haben einen KFZ-meisterbetrieb, verkaufen und vermieten Fahrzeuge, bieten Erdbauarbauarbeiten an und Minibaggerverleih."
+          />
+          <link rel="canonical" href="https://www.zhj.at/" />
+        </Helmet>
+
+        <Header image={BgImage}>
+          <h1 className="light align-center">
+            ZHJ – Zitzenbacher Herbert jun. <br />
+            Karosserie – Lack – Mechanik
+          </h1>
+          <p className="container-middle align-center">
+            Als kompetenter und qualifizierter KFZ-Meisterbetrieb kümmern wir
+            uns um Ihr Auto, verkaufen und vermieten Fahrzeuge, sind als
+            Taxiunternehmen reglementiert, bieten Erdbauarbeiten an und
+            verleihen Minibagger.
+          </p>
+          <div className="row justify-center container">
+            <div onClick={this.scrolling} className="btn-border-rounded-full">
+              <p className="align-center">mehr erfahren</p>
             </div>
           </div>
+        </Header>
+
+        <div id="finish" className="container-big row sp-icon-container">
+          {this.renderIcons(iconArray)}
         </div>
+
+        <div className="container-big pt">
+          <Fade bottom>
+            <h2 className="container-big align-center">Über ZHJ</h2>
+          </Fade>
+          <div className="row justify-center">
+            <Fade bottom>
+              <div className="colmd-6">
+                <p className="align-center">
+                  Die Liebe zum Fahrzeug beginnt meist in den Kinderschuhen. So
+                  auch bei mir. Meine Ausbildungen zum KFZ-Techniker im Jahr
+                  2001 sowie die weiteren Ausbildungen zum
+                  Karosseriebautechniker und Lackierer waren geprägt davon.
+                  <br />
+                  <br />
+                  Meine KFZ-Werkstätte mit vorerst Reparaturarbeiten startete in
+                  einem kleinen angemieteten Gebäude in Treffling. In Feistritz
+                  ob Grades wurde später expandiert und ein Miethaus samt
+                  LKW-Garage bot Platz. <br />
+                  <br />
+                  2005 absolvierte ich erfolgreich den KFZ-Techiker Meister,
+                  später den Karosseriebautechniker Meister, den Lackierer
+                  Meister und den Landmaschinentechniker Meister.
+                  <br />
+                  <br />
+                  2009 begann der Bau des KFZ-Meisterbetriebs in Mölbling-Ost 4.
+                  Noch im selben Jahr wurde „ZHJ – Zitzenbacher Herbert jun. –
+                  Fahrzeugtechnik Handels- und Dienstleistungs GesmbH“
+                  gegründet!
+                  <br />
+                  <br />
+                  2017 wurde die Werkstatt durch einen Zubau mit einer
+                  Spenglerei und Lackiererei erweitert.
+                  <br />
+                  <br />
+                  <span className="italic bold">
+                    " AUTOREPARATUR IST VERTRAUENSSACHE! "
+                  </span>
+                  <br />
+                  Herbert Zitzenbacher jun.
+                </p>
+              </div>
+            </Fade>
+          </div>
+        </div>
+
+        <OurTeam />
+
+        <GallerySection name="Über uns" />
+
+        <Preorder
+          button="Kontakt"
+          title="Kontaktieren Sie uns"
+          text="Für weitere Fragen, Beratung und/oder mehr Informationen zu den Angeboten steht Ihnen das Team von ZHJ gerne zur Verfügung. Wir freuen uns darauf eine Nachricht von Ihnen zu erhalten"
+          time={false}
+        />
       </div>
     );
   }

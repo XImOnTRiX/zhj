@@ -9,23 +9,58 @@ export class Svg extends Component {
   }
 
   onHover = (e) => {
-    console.log(e.target.id);
-    if(e.target.id === "Reifen") {
-      this.setState({
-        text: e.target.id
-      })
+    switch(e.target.id) {
+      case "Reifen":
+        this.setState({ text: e.target.id,
+          m: 'Wir haben alle Arten von Sommer -/ Winterreifen und finden immer den passenden für Sie.' })
+        break;
+      case "Reparatur":
+        this.setState({ text: e.target.id,
+          m: 'Motor, Getriebe, Mobilitätsgarantie' })
+        break;
+      case "Prüfstelle":
+        this.setState({ text: e.target.id,
+          m: 'KFZ-Überprüfung nach §57a' })
+        break;
+      case "Versicherung":
+        this.setState({ text: 'Unfallspezialist',
+           m: 'Vollumfängliche Karosserie-, Lack-, und Schadensabwicklung von Versicherungsschäden' })
+        break;
+      case "Lackierung":
+        this.setState({ text: e.target.id,
+          m: 'Teil- und Vollflächenlackierung, Oldtimerlackierung' })
+        break;
+      case "Appschleppdienst":
+        this.setState({ text: e.target.id,
+          m: 'Wir arbeiten mit professionellen Abschleppdiensten zusammen, Anruf genügt!' })
+        break;
+      case "Leihwagen":
+        this.setState({ text: e.target.id,
+          m: 'Bei Service und Reparatur steht ihnen ein Ersatzwagen zur Verfügung' })
+        break;
+      case "Spenglerei":
+        this.setState({ text: e.target.id,
+          m: 'Hagelinstandsetzung, Reparatur und Austausch von Windschutzscheiben, Reparatur von Dellen ' })
+        break;
+      default:
+        return;
     }
   }
 
   renderText = () => {
     return (
-      <p>{this.state.text}</p>
+      <div>
+        <h5>{this.state.text}</h5>
+        <p>{this.state.m}</p>
+      </div>
+
+
     );
   }
 
   render() {
     return(
-      <div>
+      <div className="removeAtMiddle">
         <svg id="Ebene_1" style={{"enableBackground":"new 0 0 1920 1080"}} version="1.1" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" xmlSpace="preserve">
         	<g style={{"opacity":"0.56"}}>
             <g>
@@ -69,9 +104,9 @@ export class Svg extends Component {
         			</g>
         		</g>
         	</g>
-        	<g id="Reparatur" className="icon-hover">
+        	<g id="Reparatur" className="icon-hover" onMouseOver={this.onHover}>
         		<g className="hover-yes">
-        			<path className="animateStrokeIcon-2" style={{"fill":"#FFD400"}} d="M858.357,362.171c0,3.405-0.275,6.746-0.793,9.997c-4.788,29.871-30.68,52.688-61.893,52.688&#xD;&#xA;&#x9;&#x9;&#x9;c-0.412,0-0.833-0.008-1.246-0.016c-34.044-0.663-61.44-28.463-61.44-62.669c0-34.618,28.067-62.685,62.685-62.685&#xD;&#xA;&#x9;&#x9;&#x9;C830.29,299.486,858.357,327.553,858.357,362.171z"/>
+        			<path id="Reparatur" className="animateStrokeIcon-2" style={{"fill":"#FFD400"}} d="M858.357,362.171c0,3.405-0.275,6.746-0.793,9.997c-4.788,29.871-30.68,52.688-61.893,52.688&#xD;&#xA;&#x9;&#x9;&#x9;c-0.412,0-0.833-0.008-1.246-0.016c-34.044-0.663-61.44-28.463-61.44-62.669c0-34.618,28.067-62.685,62.685-62.685&#xD;&#xA;&#x9;&#x9;&#x9;C830.29,299.486,858.357,327.553,858.357,362.171z"/>
         		</g>
         		<path className="animateIconShadow-2" style={{"opacity":"0.5","fillRule":"evenodd","clipRule":"evenodd","fill":"#777777"}} d="M836,355l22.096,12.872&#xD;&#xA;&#x9;&#x9;c0,0-3.203,48.881-54.649,56.504L780,398l14-3l10-1l9-4l6-5l4-10l3-12l1-8H836z"/>
         		<g className="animateIcon" >
@@ -79,9 +114,9 @@ export class Svg extends Component {
         			<path className="animateIconIcon-2" style={{"fillRule":"evenodd","clipRule":"evenodd","fill":"#777777"}} d="M799.053,357.5l2.031,2.031l6.514-6.514l2.816-0.953&#xD;&#xA;&#x9;&#x9;&#x9;l2.755-3.966l-2.684-2.684l-3.942,2.785l-0.977,2.786L799.053,357.5L799.053,357.5z M788.652,365.513l-1.508-1.508l-8.435,8.435&#xD;&#xA;&#x9;&#x9;&#x9;c-1.317,1.316-1.971,3.388-1.205,5.156c0.414,0.955,2.548,3.089,3.502,3.503c1.768,0.767,3.84,0.112,5.157-1.205l8.435-8.435&#xD;&#xA;&#x9;&#x9;&#x9;l-1.508-1.508l-3.35,3.35c-1.175,1.175-2.595-0.245-1.42-1.42l3.35-3.35l-1.599-1.599l-3.35,3.35&#xD;&#xA;&#x9;&#x9;&#x9;c-1.175,1.175-2.595-0.245-1.42-1.42L788.652,365.513L788.652,365.513z M793.626,356.386l1.228-1.228l8.593,8.593l-1.228,1.229&#xD;&#xA;&#x9;&#x9;&#x9;L793.626,356.386L793.626,356.386z M800.664,379.101l-1.104-4.527l-14.194-14.194l-4.527-1.104l-2.4-2.4l-1.242-4.635l0.493-0.493&#xD;&#xA;&#x9;&#x9;&#x9;l4.01,4.01c0.305,0.305,0.808,0.305,1.113,0l3.143-3.143c0.303-0.303,0.304-0.809,0-1.113l-4.01-4.01l0.493-0.493l4.635,1.242&#xD;&#xA;&#x9;&#x9;&#x9;l2.399,2.4l1.126,4.611c4.696,4.696,9.392,9.391,14.087,14.087l4.611,1.127l2.399,2.399l1.242,4.635l-0.493,0.493l-4.01-4.01&#xD;&#xA;&#x9;&#x9;&#x9;c-0.305-0.305-0.808-0.305-1.113,0l-3.143,3.143c-0.306,0.306-0.306,0.806,0,1.113l4.01,4.01l-0.493,0.493l-4.635-1.242&#xD;&#xA;&#x9;&#x9;&#x9;L800.664,379.101z"/>
         		</g>
         	</g>
-        	<g id="Lackierung" className="icon-hover">
+        	<g id="Lackierung" className="icon-hover" onMouseOver={this.onHover}>
         		<g className="hover-yes">
-        			<path className="animateStrokeIcon-5" style={{"fill":"#FFD400"}} d="M1240.576,419.681c0,0.404,0,0.817-0.016,1.221c-0.647,34.052-28.455,61.464-62.669,61.464&#xD;&#xA;&#x9;&#x9;&#x9;c-0.243,0-0.477,0-0.72-0.008c-34.287-0.38-61.965-28.301-61.965-62.677c0-34.618,28.067-62.685,62.685-62.685&#xD;&#xA;&#x9;&#x9;&#x9;S1240.576,385.063,1240.576,419.681z"/>
+        			<path id="Lackierung" className="animateStrokeIcon-5" style={{"fill":"#FFD400"}} d="M1240.576,419.681c0,0.404,0,0.817-0.016,1.221c-0.647,34.052-28.455,61.464-62.669,61.464&#xD;&#xA;&#x9;&#x9;&#x9;c-0.243,0-0.477,0-0.72-0.008c-34.287-0.38-61.965-28.301-61.965-62.677c0-34.618,28.067-62.685,62.685-62.685&#xD;&#xA;&#x9;&#x9;&#x9;S1240.576,385.063,1240.576,419.681z"/>
         		</g>
         		<path className="animateIconShadow-5" style={{"opacity":"0.5","fill":"#474747"}} d="M1185.969,385.875l54.518,30.48c0,0,4.265,42.703-40.245,61.674L1168,463.331"/>
         		<g className="animateIconIcon-5">
@@ -96,9 +131,9 @@ export class Svg extends Component {
         			</g>
         		</g>
         	</g>
-        	<g id="Prüfstelle" className="icon-hover">
+        	<g id="Prüfstelle" className="icon-hover" onMouseOver={this.onHover}>
         		<g className="hover-yes">
-        			<path className="animateStrokeIcon-3" style={{"fill":"#777777"}} d="M993.477,295.799c0,26.247-16.128,48.725-39.019,58.059c-7.304,2.985-15.295,4.627-23.667,4.627&#xD;&#xA;&#x9;&#x9;&#x9;c-34.619,0-62.685-28.067-62.685-62.685s28.067-62.685,62.685-62.685c34.222,0,62.038,27.428,62.669,61.496&#xD;&#xA;&#x9;&#x9;&#x9;C993.477,295.006,993.477,295.403,993.477,295.799z"/>
+        			<path id="Prüfstelle" className="animateStrokeIcon-3" style={{"fill":"#777777"}} d="M993.477,295.799c0,26.247-16.128,48.725-39.019,58.059c-7.304,2.985-15.295,4.627-23.667,4.627&#xD;&#xA;&#x9;&#x9;&#x9;c-34.619,0-62.685-28.067-62.685-62.685s28.067-62.685,62.685-62.685c34.222,0,62.038,27.428,62.669,61.496&#xD;&#xA;&#x9;&#x9;&#x9;C993.477,295.006,993.477,295.403,993.477,295.799z"/>
         		</g>
         		<path className="animateIconShadow-3" style={{"opacity":"0.5","fill":"#474747"}} d="M957.752,260.988l35.279,27.333c0,0,4.969,50.678-44.031,66.678l-33.153-19.825&#xD;&#xA;&#x9;&#x9;L957.752,260.988z"/>
         		<g className="animateIconIcon-3">
@@ -146,9 +181,9 @@ export class Svg extends Component {
         			</g>
         		</g>
         	</g>
-        	<g id="Versicherung" className="icon-hover">
+        	<g id="Versicherung" className="icon-hover" onMouseOver={this.onHover}>
         		<g className="hover-yes">
-        			<path className="animateStrokeIcon-4" style={{"fill":"#909090"}} d="M1137.585,319.537c0,4.408-0.453,8.703-1.326,12.853c-5.055,24.306-24.193,43.443-48.498,48.514&#xD;&#xA;&#x9;&#x9;&#x9;c-4.149,0.865-8.452,1.318-12.861,1.318c-34.618,0-62.685-28.067-62.685-62.685s28.067-62.685,62.685-62.685&#xD;&#xA;&#x9;&#x9;&#x9;S1137.585,284.919,1137.585,319.537z"/>
+        			<path id="Versicherung" className="animateStrokeIcon-4" style={{"fill":"#909090"}} d="M1137.585,319.537c0,4.408-0.453,8.703-1.326,12.853c-5.055,24.306-24.193,43.443-48.498,48.514&#xD;&#xA;&#x9;&#x9;&#x9;c-4.149,0.865-8.452,1.318-12.861,1.318c-34.618,0-62.685-28.067-62.685-62.685s28.067-62.685,62.685-62.685&#xD;&#xA;&#x9;&#x9;&#x9;S1137.585,284.919,1137.585,319.537z"/>
         		</g>
         		<path className="animateIconShadow-4" style={{"opacity":"0.5","fill":"#474747"}} d="M1112.028,301.157l25.396,22.872c0,0-2.788,47.15-50.606,57.06L1048,358l8.5-8.5&#xD;&#xA;&#x9;&#x9;l3.32-2.29c0,0,2.18-3.728,8.43-2.719l20.622-0.005c0,0,2.363-0.38,6.495-3.683L1109.5,329.5l1.148-3.25l4.032-14.503l-2.181-4.247&#xD;&#xA;&#x9;&#x9;v-4L1112.028,301.157z"/>
         		<g className="animateIconIcon-4">
@@ -171,9 +206,9 @@ export class Svg extends Component {
         			<path style={{"fill":"#FFD400"}} d="M1047.616,307.667c0.037,1.153,0.103,3.652,0.682,3.929c1.132,0.541,4.992,1.033,7.73,1.557&#xD;&#xA;&#x9;&#x9;&#x9;c-0.17-0.032-0.027-0.344-0.027-0.519c0-4.171,3.378-7.549,7.546-7.549s7.546,3.378,7.546,7.549c0,0.175-0.015,0.348-0.027,0.521&#xD;&#xA;&#x9;&#x9;&#x9;c7.619,0,13.874,0,21.482,0c-0.009-0.172-0.023-0.346-0.023-0.521c0-4.171,3.377-7.549,7.545-7.549&#xD;&#xA;&#x9;&#x9;&#x9;c4.165,0,7.543,3.378,7.543,7.549c0,0.171-0.015,0.338-0.026,0.507c2.993-0.293,5.467-0.43,5.954-0.553&#xD;&#xA;&#x9;&#x9;&#x9;c1.264-0.319,1.474-1.162,1.457-3.584c0,0,0.057-0.455-0.994-0.524c0.121-3.732-1.152-6.55-1.152-6.55&#xD;&#xA;&#x9;&#x9;&#x9;c-1.608-2.474-14.35-5.443-14.35-5.443l-8.82-6.635c-1.395-0.995-3.065-1.53-4.778-1.53h-17.308c-2.015,0-3.959,0.739-5.465,2.078&#xD;&#xA;&#x9;&#x9;&#x9;l-5.942,5.281l-5.038,1.202c-1.188,0.457-1.987,1.327-2.193,2.102c-0.137,0.514-0.287,1.298-0.421,2.203h1.343&#xD;&#xA;&#x9;&#x9;&#x9;c0.516,0,0.919,0.446,0.866,0.959l-0.154,2.003c-0.045,0.579-0.527,1.026-1.108,1.026h-1.157&#xD;&#xA;&#x9;&#x9;&#x9;c-0.006,0.205-0.191,0.651-0.191,0.845l-0.282,0.564C1047.685,306.921,1047.604,307.292,1047.616,307.667z M1106.127,300.321&#xD;&#xA;&#x9;&#x9;&#x9;c3.34,1.002,4.994,1.973,5.261,2.422c0.387,0.646,0.497,1.768,0.633,2.556c0.053,0.308-0.192,0.583-0.505,0.57&#xD;&#xA;&#x9;&#x9;&#x9;c-1.077-0.045-2.662-0.186-3.385-0.621C1106.787,304.443,1105.292,300.321,1106.127,300.321z M1077.048,290.426h7.856&#xD;&#xA;&#x9;&#x9;&#x9;c1.282,0,2.512,0.394,3.519,1.111l4.584,3.502c0.938,0.716,0.431,2.214-0.749,2.214h-15.21V290.426z M1059.975,295.13l3.553-3.158&#xD;&#xA;&#x9;&#x9;&#x9;c1.121-0.996,2.568-1.546,4.068-1.546h6.59v6.827h-13.405C1059.665,297.253,1059.14,295.872,1059.975,295.13z"/>
         		</g>
         	</g>
-        	<g id="Abschleppdienst" className="icon-hover">
+        	<g id="Abschleppdienst" className="icon-hover" onMouseOver={this.onHover}>
         		<g className="hover-yes">
-        			<path className="animateStrokeIcon-6" style={{"fill":"#909090"}} d="M1267.955,563.662c0,4.392-0.453,8.679-1.318,12.812c-5.047,24.338-24.209,43.5-48.547,48.563&#xD;&#xA;&#x9;&#x9;&#x9;c-4.141,0.857-8.428,1.31-12.82,1.31c-34.618,0-62.685-28.067-62.685-62.685c0-34.627,28.067-62.685,62.685-62.685&#xD;&#xA;&#x9;&#x9;&#x9;C1239.888,500.977,1267.955,529.036,1267.955,563.662z"/>
+        			<path id="Appschleppdienst" className="animateStrokeIcon-6" style={{"fill":"#909090"}} d="M1267.955,563.662c0,4.392-0.453,8.679-1.318,12.812c-5.047,24.338-24.209,43.5-48.547,48.563&#xD;&#xA;&#x9;&#x9;&#x9;c-4.141,0.857-8.428,1.31-12.82,1.31c-34.618,0-62.685-28.067-62.685-62.685c0-34.627,28.067-62.685,62.685-62.685&#xD;&#xA;&#x9;&#x9;&#x9;C1239.888,500.977,1267.955,529.036,1267.955,563.662z"/>
         		</g>
         		<path className="animateIconShadow-6" style={{"opacity":"0.5","fill":"#474747"}} d="M1253,578l10.007,10.099c0,0-12.891,32.372-48.949,37.636l-43.759-32.849L1189,585l1-5&#xD;&#xA;&#x9;&#x9;h37l6-1l11-0.147L1253,578z"/>
         		<g className="animateIconIcon-6">
@@ -195,9 +230,9 @@ export class Svg extends Component {
         			<path style={{"fill":"#5E5E5E"}} d="M1215.962,538.395c1.042,0,1.888-0.843,1.888-1.887c0-1.042-0.845-1.887-1.888-1.887&#xD;&#xA;&#x9;&#x9;&#x9;c-1.04,0-1.885,0.845-1.885,1.887C1214.077,537.552,1214.922,538.395,1215.962,538.395z"/>
         		</g>
         	</g>
-        	<g id="Leihwagen" className="icon-hover">
+        	<g id="Leihwagen" className="icon-hover" onMouseOver={this.onHover}>
         		<g className="hover-yes">
-        			<path className="animateStrokeIcon-7" style={{"fill":"#777777"}} d="M1201.492,703.608c0,34.619-28.067,62.685-62.685,62.685c-1.351,0-2.685-0.04-4.012-0.129&#xD;&#xA;&#x9;&#x9;&#x9;c-32.75-2.063-58.674-29.288-58.674-62.556c0-34.618,28.067-62.685,62.685-62.685c32.629,0,59.434,24.929,62.402,56.781&#xD;&#xA;&#x9;&#x9;&#x9;C1201.395,699.645,1201.492,701.618,1201.492,703.608z"/>
+        			<path id="Leihwagen" className="animateStrokeIcon-7" style={{"fill":"#777777"}} d="M1201.492,703.608c0,34.619-28.067,62.685-62.685,62.685c-1.351,0-2.685-0.04-4.012-0.129&#xD;&#xA;&#x9;&#x9;&#x9;c-32.75-2.063-58.674-29.288-58.674-62.556c0-34.618,28.067-62.685,62.685-62.685c32.629,0,59.434,24.929,62.402,56.781&#xD;&#xA;&#x9;&#x9;&#x9;C1201.395,699.645,1201.492,701.618,1201.492,703.608z"/>
         		</g>
         		<g>
         			<path className="animateIconShadow-7" style={{"opacity":"0.5","fill":"#474747"}} d="M1097,715l77.332,40.257c0,0,25.183-17.199,26.925-46.228L1186,699l-84,1l-8,10&#xD;&#xA;&#x9;&#x9;&#x9;L1097,715z"/>
@@ -218,9 +253,9 @@ export class Svg extends Component {
         			</g>
         		</g>
         	</g>
-        	<g id="Spenglerei" className="icon-hover">
+        	<g id="Spenglerei" className="icon-hover" onMouseOver={this.onHover}>
         		<g className="hover-yes">
-        			<path className="animateStrokeIcon-8" style={{"fill":"#FFD400"}} d="M1066.963,773.274c0,4.279-0.429,8.461-1.254,12.505c-5.266,26.029-26.651,46.201-53.295,49.655&#xD;&#xA;&#x9;&#x9;&#x9;c-2.661,0.348-5.379,0.526-8.137,0.526c-34.619,0-62.685-28.067-62.685-62.685c0-34.618,28.067-62.685,62.685-62.685&#xD;&#xA;&#x9;&#x9;&#x9;C1038.896,710.589,1066.963,738.656,1066.963,773.274z"/>
+        			<path id="Spenglerei" className="animateStrokeIcon-8" style={{"fill":"#FFD400"}} d="M1066.963,773.274c0,4.279-0.429,8.461-1.254,12.505c-5.266,26.029-26.651,46.201-53.295,49.655&#xD;&#xA;&#x9;&#x9;&#x9;c-2.661,0.348-5.379,0.526-8.137,0.526c-34.619,0-62.685-28.067-62.685-62.685c0-34.618,28.067-62.685,62.685-62.685&#xD;&#xA;&#x9;&#x9;&#x9;C1038.896,710.589,1066.963,738.656,1066.963,773.274z"/>
         		</g>
         		<path className="animateIconShadow-8" style={{"opacity":"0.5","fill":"#303030"}} d="M1040.528,753.276l24.983,33.429c0,0-5.76,34.903-43.136,46.599L974,800l19,12l17,2&#xD;&#xA;&#x9;&#x9;l14-3l11-11l6-11l2-12l-5-19v-4l1.833-0.724H1040.528z"/>
         		<g className="animateIconIcon-8">

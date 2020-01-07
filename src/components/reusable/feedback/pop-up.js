@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { post, fetch } from '../../../redux/actions/actions';
-import { GET_URL, GET_TOKEN, MASTER_KEY, SAVE_URL } from '../../../config';
+import { MASTER_KEY, SAVE_URL } from '../../../config';
 import { Rating } from './rating';
 import Comment from './comment';
 

@@ -1,9 +1,7 @@
 import React from 'react';
 
 export default class ContentEditable extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+
   shouldComponentUpdate(nextProps){
     return nextProps.html !== this.nodeSelect.innerHTML;
   }
@@ -27,7 +25,7 @@ export default class ContentEditable extends React.Component {
   }
 
   render() {
-    const { ...otherAttributes } = this.props;
+    // const { ...otherAttributes } = this.props;
     return(
       <p
         className="field"

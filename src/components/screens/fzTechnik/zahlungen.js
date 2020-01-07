@@ -1,25 +1,35 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 
-export const ZahlungsModalitäten = (props) => (
-  <div className="row container-middle-big section-padding">
-    <h1 className="light column col-12 align-center wordbreak">Zahlungsmodalitäten</h1>
-    <div className="column col-12 colmd-4 flex-align-center">
-      <div>
-        <img className="testcircle" />
-        <p className="align-center">Bar</p>
+import Bar from '../../../media/grafiken/money.png';
+import Card from '../../../media/grafiken/credit-card.png';
+import Mat from '../../../media/grafiken/withdraw.png';
+
+export const ZahlungsModalitaeten = (props) => (
+  <div className="row pb pt container-middle-big">
+    <Fade bottom>
+      <h3 className="regular column col-12 align-center wordbreak">Zahlungsmodalitäten</h3>
+      <p className="col-12 align-center">
+        ZHJ – Zitzenbacher Herbert jun.<br />
+        Wir akzeptieren Bargeld, Bankomat- oder Kreditkarte.
+      </p>
+    </Fade>
+    <Fade bottom>
+      <div className="column colz-4 colmd-4 flex-align-center">
+        <div className="container">
+          <img alt="Barzahlung" src={Bar} />
+        </div>
       </div>
-    </div>
-    <div className="column col-12 colmd-4 flex-align-center">
-      <div>
-        <img className="testcircle" />
-        <p className="align-center">Bankomat</p>
+      <div className="column colz-4 colmd-4 flex-align-center">
+        <div className="container">
+          <img alt="Bankomat vorhanden" src={Mat} />
+        </div>
       </div>
-    </div>
-    <div className="column col-12 colmd-4 flex-align-center">
-      <div>
-        <img className="testcircle" />
-        <p className="align-center">Kreditkarte</p>
+      <div className="column colz-4 colmd-4 flex-align-center">
+        <div className="container">
+          <img alt="Kartenzahlung" src={Card} />
+        </div>
       </div>
-    </div>
+    </Fade>
   </div>
 );

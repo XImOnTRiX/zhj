@@ -1,0 +1,25 @@
+//main: ../index.scss
+
+.header {
+  &-img {
+    opacity: 0.3;
+    width: auto;
+    height: 100vh;
+    @include respond-to($large) {
+      width: 110%;
+      height: auto;
+    }
+  }
+  &-divider {
+    width: 100vw;
+    position: absolute;
+    z-index: 1;
+    bottom: -1px;
+  }
+  &-text {
+    position: absolute;
+    z-index: 2;
+    top: 10%;
+    width: 100%;
+  }
+}
