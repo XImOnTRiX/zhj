@@ -45,7 +45,7 @@ class AutohandelPage extends Component {
           children={
             <div className="container">
               <h5 className="light align-center">Sie werden in Kürze nach www.willhaben.at weitergeleitet</h5>
-              <p className="align-center">Falls Sie nicht Automatisch weitergeleitet werden klicken Sie auf "WEITER"</p>
+              <p className="align-center">Falls Sie nicht automatisch weitergeleitet werden, klicken Sie auf "WEITER"</p>
             </div>
           }
         />

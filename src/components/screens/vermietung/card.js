@@ -22,14 +22,12 @@ class CarCard extends Component {
         } else { return null }
       })
     } else {
-      console.log('nop');
       return;
     }
   }
 
   render() {
     const { cars } = this.props.data;
-    console.log(cars);
     return (
       <div className="container row nop">
         <div className="container"><h6 className="big">Busse</h6></div>

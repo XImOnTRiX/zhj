@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
 import OnlineImg from '../../../media/logos/ZHJ_ONLINE.png';
+import FacebookImg from '../../../media/grafiken/facebook.svg';
+import InstaImg from '../../../media/grafiken/instagram.svg';
 
 import { NavLink } from 'react-router-dom';
 
@@ -28,8 +30,15 @@ class Footer extends Component {
           <div className="row">
             <div className="colmd-4 flexbox flex-align-center justify-center">
               <div className="row">
-                <div className="colmd-12 nop">
+                <div className="colmd-4 colz-5">
                   <img className="footerImg" src={OnlineImg} />
+                </div>
+                <div className="colmd-2 colz-1"></div>
+                <div className="colmd-3 colz-3">
+                  <a alt="ZHJ Facebook" href="https://www.facebook.com/pages/category/Business-Service/ZHJ-Fahrzeugtechnik-Handels-und-Dienstleistungs-GesmbH-205867256133231/" target="_blank"><img className="facebookImg" src={FacebookImg} /></a>
+                </div>
+                <div className="colmd-3 colz-3">
+                  <a alt="ZHJ Instagram" href="https://www.instagram.com/zhj_fahrzeugtechnik/?hl=de" target="_blank"><img className="facebookImg" src={InstaImg} /></a>
                 </div>
               </div>
             </div>

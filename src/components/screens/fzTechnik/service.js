@@ -23,11 +23,11 @@ export const ServiceList = (props) => (
       </Fade>
     </div>
     <div className="row">
-    <div className="collg-1"></div>
+      <div className="collg-1"></div>
       <div className="column colmd-6 collg-4">
         <Fade bottom>
           <p className="p">
-            Eine Liste einiger unserer Angebote / Leistungen von A - Z die wir Anbieten. Von Achsvermessung über Dellen Reparatur und Gratis Leihwagen bis hin zu Pannenhilfe ist alles dabei.
+            Eine Liste einiger unserer Angebote / Leistungen von A - Z die wir anbieten. Von Achsvermessung über Dellen Reparatur und gratis Leihwagen bis hin zu Pannenhilfe ist alles dabei.
           </p>
         </Fade>
         <Fade bottom>

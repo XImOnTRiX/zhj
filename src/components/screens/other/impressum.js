@@ -45,40 +45,40 @@ class Impressum extends Component {
           </p>
 
           <p className="pt ">
-            design in time werbeagentur e.U.<br />
-            Burgstraße 9<br />
-            9330 Althofen<br />
+            ZHJ Fahrzeugtechnik Handels u. Dienstleistungs GesmbH<br />
+            Mölbling-Ost 4<br />
+            9330 Mölbling<br />
           </p>
           <p className="sspt">
-            T 0699 190 10 202<br />
-            office(at)designintime.at<br />
-            www.designintime.at<br />
+            T 04262 27380<br />
+            Fax 04262 27388<br />
+            office@zhj-fahrzeugtechnik.at<br />
           </p>
           <p className="sspt">
-            Inh.: Sandra Bacher-Schönfelder
+            Inh.: Zitzenbacher Herbert jun.
           </p>
           <p className="sspt">
-            FN: 399732 t
+            FN: 336257x
           </p>
           <p className="sspt">
-            UID: ATU67796815
+            UID: ATU65565578
           </p>
 
 
 
 
           <h6 className="big pt">
-            Konzept, Layout und Umsetzung
+            Konzept, Layout und Programmierung
           </h6>
           <p className="">
-            design in time werbeagentur e.U.
+            <a target="_blank" href="https://www.designintime.at">design in time werbeagentur e.U.</a>
           </p>
 
           <h6 className="big pt">
-          Bildbearbeitung
+            Bildbearbeitung
           </h6>
           <p className="">
-            design in time werbeagentur e.U.
+            <a target="_blank" href="https://www.designintime.at">design in time werbeagentur e.U.</a>
           </p>
         </div>
       </div>
