@@ -64,12 +64,11 @@ class ErdbauPage extends Component {
         <Header image={BgImage}>
           <h1 className="light align-center">
             ZHJ – Zitzenbacher Herbert jun. <br />
-            Ihr Minibaggerverleih in Mölbling
+            Minibaggerverleih in Mölbling
           </h1>
           <p className="container-middle align-center">
-            Sie haben eine kleine Baustelle und brauchen einen Minibagger für
-            Erdbau- oder Garten- und Landschaftsbauarbeiten? Wir haben die
-            passenden Angebote für Sie!
+            Sie haben eine kleine Baustelle und benötigen einen Minibagger? <br />
+            Wir haben das passende Angebot für Sie!
           </p>
         </Header>
 

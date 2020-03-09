@@ -12,35 +12,35 @@ export class Svg extends Component {
     switch(e.target.id) {
       case "Reifen":
         this.setState({ text: e.target.id,
-          m: 'Wir haben alle Arten von Sommer -/ Winterreifen und finden immer den passenden für Sie.' })
+          m: 'Wir haben alle Arten von Reifen und finden bestimmt den passenden für Ihr Fahrzeug' })
         break;
       case "Reparatur":
         this.setState({ text: e.target.id,
-          m: 'Motor, Getriebe, Mobilitätsgarantie' })
+          m: 'Aller Marken und Fahrzeuge' })
         break;
       case "Prüfstelle":
         this.setState({ text: e.target.id,
-          m: 'KFZ-Überprüfung nach §57a' })
+          m: 'Fahrzeugüberprüfung nach §57a' })
         break;
       case "Versicherung":
         this.setState({ text: 'Unfallspezialist',
-           m: 'Vollumfängliche Karosserie-, Lack-, und Schadensabwicklung von Versicherungsschäden' })
+           m: 'Vollumfängliche Karosserie- und Lackreparatur, sowie Schadensabwicklung von Versicherungsschäden' })
         break;
       case "Lackierung":
         this.setState({ text: e.target.id,
           m: 'Teil- und Vollflächenlackierung, Oldtimerlackierung' })
         break;
-      case "Appschleppdienst":
+      case "Abschleppdienst":
         this.setState({ text: e.target.id,
           m: 'Wir arbeiten mit professionellen Abschleppdiensten zusammen, Anruf genügt!' })
         break;
-      case "Leihwagen":
+      case "Ersatzwagen":
         this.setState({ text: e.target.id,
-          m: 'Bei Service und Reparatur steht ihnen ein Ersatzwagen zur Verfügung' })
+          m: 'Bei Service und Reparatur steht Ihnen kostenlos ein Ersatzwagen zur Verfügung' })
         break;
       case "Spenglerei":
         this.setState({ text: e.target.id,
-          m: 'Hagelinstandsetzung, Reparatur und Austausch von Windschutzscheiben, Reparatur von Dellen ' })
+          m: 'Karosserieinstandsetzung, Reparatur und Austausch von Windschutzscheiben, Hagelschäden' })
         break;
       default:
         return;
@@ -208,7 +208,7 @@ export class Svg extends Component {
         	</g>
         	<g id="Abschleppdienst" className="icon-hover" onMouseOver={this.onHover}>
         		<g className="hover-yes">
-        			<path id="Appschleppdienst" className="animateStrokeIcon-6" style={{"fill":"#909090"}} d="M1267.955,563.662c0,4.392-0.453,8.679-1.318,12.812c-5.047,24.338-24.209,43.5-48.547,48.563&#xD;&#xA;&#x9;&#x9;&#x9;c-4.141,0.857-8.428,1.31-12.82,1.31c-34.618,0-62.685-28.067-62.685-62.685c0-34.627,28.067-62.685,62.685-62.685&#xD;&#xA;&#x9;&#x9;&#x9;C1239.888,500.977,1267.955,529.036,1267.955,563.662z"/>
+        			<path id="Abschleppdienst" className="animateStrokeIcon-6" style={{"fill":"#909090"}} d="M1267.955,563.662c0,4.392-0.453,8.679-1.318,12.812c-5.047,24.338-24.209,43.5-48.547,48.563&#xD;&#xA;&#x9;&#x9;&#x9;c-4.141,0.857-8.428,1.31-12.82,1.31c-34.618,0-62.685-28.067-62.685-62.685c0-34.627,28.067-62.685,62.685-62.685&#xD;&#xA;&#x9;&#x9;&#x9;C1239.888,500.977,1267.955,529.036,1267.955,563.662z"/>
         		</g>
         		<path className="animateIconShadow-6" style={{"opacity":"0.5","fill":"#474747"}} d="M1253,578l10.007,10.099c0,0-12.891,32.372-48.949,37.636l-43.759-32.849L1189,585l1-5&#xD;&#xA;&#x9;&#x9;h37l6-1l11-0.147L1253,578z"/>
         		<g className="animateIconIcon-6">
@@ -230,9 +230,9 @@ export class Svg extends Component {
         			<path style={{"fill":"#5E5E5E"}} d="M1215.962,538.395c1.042,0,1.888-0.843,1.888-1.887c0-1.042-0.845-1.887-1.888-1.887&#xD;&#xA;&#x9;&#x9;&#x9;c-1.04,0-1.885,0.845-1.885,1.887C1214.077,537.552,1214.922,538.395,1215.962,538.395z"/>
         		</g>
         	</g>
-        	<g id="Leihwagen" className="icon-hover" onMouseOver={this.onHover}>
+        	<g id="Ersatzwagen" className="icon-hover" onMouseOver={this.onHover}>
         		<g className="hover-yes">
-        			<path id="Leihwagen" className="animateStrokeIcon-7" style={{"fill":"#777777"}} d="M1201.492,703.608c0,34.619-28.067,62.685-62.685,62.685c-1.351,0-2.685-0.04-4.012-0.129&#xD;&#xA;&#x9;&#x9;&#x9;c-32.75-2.063-58.674-29.288-58.674-62.556c0-34.618,28.067-62.685,62.685-62.685c32.629,0,59.434,24.929,62.402,56.781&#xD;&#xA;&#x9;&#x9;&#x9;C1201.395,699.645,1201.492,701.618,1201.492,703.608z"/>
+        			<path id="Ersatzwagen" className="animateStrokeIcon-7" style={{"fill":"#777777"}} d="M1201.492,703.608c0,34.619-28.067,62.685-62.685,62.685c-1.351,0-2.685-0.04-4.012-0.129&#xD;&#xA;&#x9;&#x9;&#x9;c-32.75-2.063-58.674-29.288-58.674-62.556c0-34.618,28.067-62.685,62.685-62.685c32.629,0,59.434,24.929,62.402,56.781&#xD;&#xA;&#x9;&#x9;&#x9;C1201.395,699.645,1201.492,701.618,1201.492,703.608z"/>
         		</g>
         		<g>
         			<path className="animateIconShadow-7" style={{"opacity":"0.5","fill":"#474747"}} d="M1097,715l77.332,40.257c0,0,25.183-17.199,26.925-46.228L1186,699l-84,1l-8,10&#xD;&#xA;&#x9;&#x9;&#x9;L1097,715z"/>

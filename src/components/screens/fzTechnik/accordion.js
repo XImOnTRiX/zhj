@@ -12,7 +12,7 @@ export default class AccContainer extends Component {
       {titel: 'Unfallspezialist', text: 'Vollumfängliche Karosserie-, Lack-, und Schadensabwicklung von Versicherungsschäden'},
       {titel: 'Lackierung', text: 'Teil- und Vollflächenlackierung, Oldtimerlackierung'},
       {titel: 'Appschlepdienst', text: 'Wir arbeiten mit professionellen Abschleppdiensten zusammen, Anruf genügt!'},
-      {titel: 'Leihwagen', text: 'Bei Service und Reparatur steht ihnen ein Ersatzwagen zur Verfügung'},
+      {titel: 'Ersatzwagen', text: 'Bei Service und Reparatur steht Ihnen ein gratis Ersatzwagen zur Verfügung'},
       {titel: 'Spenglerei', text: 'Hagelinstandsetzung, Reparatur und Austausch von Windschutzscheiben, Reparatur von Dellen '},
     ]
   }

@@ -46,17 +46,16 @@ class TaxiPage extends Component {
         <Header image={BgImage}>
           <h1 className="light container align-center">
             ZHJ – Zitzenbacher Herbert jun. <br />
-            Ihr Taxiunternehmen in St. Veit
+            Taxiunternehmen in St. Veit
           </h1>
           <p className="container-middle align-center">
-            Sie suchen einen sicheren, pünktlichen und flexiblen Partner der Sie
-            oder Ihre Produkte befördert? Wir sind Ihr verlässliches
-            Taxiunternehmen!
+            Ihr Ansprechpartner für Taxifahren, Flughafentransfer und Botendienste. <br />
+            <span className="medium">sicher - pünktlich - flexibel</span>
           </p>
 
           <a href="tel:04122612">
             <h1 className="medium align-center pt tertiary">
-              Tel.: +43 42 12/26 12
+              T 042 12/26 12
             </h1>
           </a>
         </Header>
