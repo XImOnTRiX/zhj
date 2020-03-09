@@ -4,15 +4,15 @@ export const MASTER_KEY = '684931fe886cf92bb0d5f83e3ba002';
 
 const origin = window.location.origin;
 
-export const GET_URL = `${origin}/cockpit-zhj/api/collections/get`;
-export const GET_URL_SINGLETONS = `${origin}/cockpit-zhj/api/singletons/get`
-// export const GET_URL = `http://127.0.0.1/cockpit-zhj/api/collections/get`;
-// export const GET_URL_SINGLETONS = `http://127.0.0.1/cockpit-zhj/api/singletons/get`
+// export const GET_URL = `${origin}/cockpit-zhj/api/collections/get`;
+// export const GET_URL_SINGLETONS = `${origin}/cockpit-zhj/api/singletons/get`
+export const GET_URL = `http://pr415.webofficeserver.info/cockpit-zhj/api/collections/get`;
+export const GET_URL_SINGLETONS = `http://pr415.webofficeserver.info/cockpit-zhj/api/singletons/get`
 
-// export const IMAGE_PATH = `http://127.0.0.1`;
+// export const IMAGE_PATH = `http://pr415.webofficeserver.info/`;
 export const IMAGE_PATH = `${origin}`;
-// export const IMAGE_PATH_EXTENDED = `http://127.0.0.1/cockpit-zhj/storage/uploads`;
-export const IMAGE_PATH_EXTENDED = `${origin}/cockpit-zhj/storage/uploads`;
+export const IMAGE_PATH_EXTENDED = `http://pr415.webofficeserver.info/cockpit-zhj/storage/uploads`;
+// export const IMAGE_PATH_EXTENDED = `${origin}/cockpit-zhj/storage/uploads`;
 
-// export const SAVE_URL = `http://127.0.0.1/cockpit-zhj/api/collections/save`;
-export const SAVE_URL = `${origin}/cockpit-zhj/api/collections/save`;
+export const SAVE_URL = `http://pr415.webofficeserver.info/cockpit-zhj/api/collections/save`;
+// export const SAVE_URL = `${origin}/cockpit-zhj/api/collections/save`;
