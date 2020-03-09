@@ -7,19 +7,19 @@ export default class WeDo extends Component {
     services: [
       {
         title: 'Minibaggerarbeiten',
-        description: 'Aushub- und Erdarbeiten vom Profi! Bei uns erhalten Sie jahrelange Erfahrung, professionelle und saubere Arbeit bei Ihrem Haus- und Gartenbau. '
+        description: 'Wir sind ein konzessioniertes Erdbauunternehmen und bieten professionelle Erdbauarbeiten an, wie z. B.: Kanal-, Wasser- und Stromanschlüsse bei Neubauten, Sanierungsarbeiten bei Altbauten und Gartengestaltungen.'
       },
       {
         title: 'Minibaggerverleih',
-        description: 'Sie legen gerne selbst Hand an? Bei uns können Sie hochwertige Minibagger ausleihen! Egal ob als Gewerbekunde oder als Privatperson. So bekommt Ihr persönliches Projekt maschinelle Unterstützung!'
+        description: 'Bei uns können Sie einen Minibagger mieten. Egal ob als Gewerbekunde oder als Privatperson. So bekommt Ihr persönliches Projekt maschinelle Unterstützung.'
       },
       {
         title: 'Hydromeisel',
-        description: 'Wir bieten Ihnen unsere Erdbau-Konzession für professionelle Schremmarbeiten inkl. Fahrer an! Die Verleihung von Zubehör wie Rüttelplatten, Stampfer und elektrische Zwangsmischer sind ein weiterer Bonus für Sie!'
+        description: 'Wir bieten professionelle Schremmarbeiten inkl. Fahrer. Die Verleihung von Zubehör wie Rüttelplatte, Stampfer und elektrischen Zwangsmischer sind ein weiterer Bonus für Sie.'
       },
       {
         title: 'Winterdienst',
-        description: 'Sie suchen Pfleger für Ihre Außenflächen? Wir übernehmen für Sie Baum- und Strauchschnitt, das Rasenmähen, Bewässern, das Schneeräumen und alles Notwendige rund um den Schutz von Fußgängergehwegen. Ob für Firmengelände oder für Privatflächen, wir befreien Sie von den lästigen Pflichten!'
+        description: 'schaufeln - salzen - streuen. Wir sind Ihr kompetenter Winterdienst Partner für Ihre Objektbetreuung in Mölbling, Althofen und Umgebung.'
       },
     ]
   }

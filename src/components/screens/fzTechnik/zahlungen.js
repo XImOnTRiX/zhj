@@ -10,7 +10,6 @@ export const ZahlungsModalitaeten = (props) => (
     <Fade bottom>
       <h3 className="regular column col-12 align-center wordbreak">Zahlungsmodalitäten</h3>
       <p className="col-12 align-center">
-        ZHJ – Zitzenbacher Herbert jun.<br />
         Wir akzeptieren Bargeld, Bankomat- oder Kreditkarte.
       </p>
     </Fade>

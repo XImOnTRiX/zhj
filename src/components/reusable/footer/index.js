@@ -62,13 +62,14 @@ class Footer extends Component {
             <div className="colmd-4">
               <h6 className="container light">Kontaktinformationen</h6>
               <p className="container primary">
-                Zitzenbacher Herbert jun. <br />
+                ZHJ Fahrzeugtechnik Handels u. Dienstleistungs GesmbH <br />
                 Mölbling-Ost 4 <br />
                 9330 Mölbling
               </p>
               <p className="container nopt primary">
-                Tel. 04262 / 27 38 0 <br />
-                office@zhj.at <br />
+                T. 04262 / 27 380 <br />
+                F. 04262 / 27 388 <br />
+                office@zhj-fahrzeugtechnik.at <br />
               </p>
             </div>
           </div>

@@ -102,14 +102,13 @@ class FzTechnikPage extends Component {
           <Fade bottom>
             <h1 className="light container-big align-center">
               ZHJ – Zitzenbacher Herbert jun. <br />
-              Unsere <span className="medium">Leistungen</span> des
-              KFZ-Meisterbetriebs in Mölbling.
+
+              KFZ-Meisterbetrieb in Mölbling.
             </h1>
           </Fade>
           <Fade bottom>
             <p className="container-middle align-center">
-              Karosserieinstandsetzung, Lackierung und Reparatur aller Marken
-              und Modelle! Egal ob PKW, LKW, SUV, Oldtimer oder Motorrad.
+
             </p>
           </Fade>
         </div>
@@ -121,7 +120,7 @@ class FzTechnikPage extends Component {
         <Preorder
           button="Kontakt"
           title="Kontaktieren Sie uns"
-          text="Für weitere Fragen, Beratung und/oder mehr Informationen zu den Angeboten steht Ihnen das Team von ZHJ gerne zur Verfügung. Wir freuen uns darauf eine Nachricht von Ihnen zu erhalten"
+          text="Für weitere Fragen, Beratung und/oder mehr Informationen zu den Angeboten steht Ihnen das Team von ZHJ gerne zur Verfügung."
           time={false}
         />
       </div>

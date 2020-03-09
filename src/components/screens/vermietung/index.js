@@ -48,7 +48,7 @@ class AutovermietungPage extends Component {
           <p className="container-middle align-center">
             Egal ob Sie in den Urlaub fahren oder eine längere Dienstreise
             planen, bei uns finden Sie passende und kostengünstige
-            Mietfahrzeuge! <br />
+            Mietfahrzeuge. <br />
             Überzeugen Sie sich selbst!
           </p>
         </Header>

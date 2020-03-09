@@ -150,7 +150,7 @@ class LandingPage extends Component {
         <Preorder
           button="Kontakt"
           title="Kontaktieren Sie uns"
-          text="Für weitere Fragen, Beratung und/oder mehr Informationen zu den Angeboten steht Ihnen das Team von ZHJ gerne zur Verfügung. Wir freuen uns darauf eine Nachricht von Ihnen zu erhalten"
+          text="Für weitere Fragen, Beratung und/oder mehr Informationen zu den Angeboten steht Ihnen das Team von ZHJ gerne zur Verfügung."
           time={false}
         />
       </div>
