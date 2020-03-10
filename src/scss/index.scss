@@ -45,6 +45,16 @@
   src: url(../media/fonts/7thservice.ttf) format('truetype');
 }
 
+.cookieText{
+  font-size: 12pt;
+}
+.cookieConsent{
+  text-align: center;
+}
+.cookieConsent button{
+  font-weight: bold;
+}
+
 .orderButton{
   cursor:default;
   margin-right: 5px;

@@ -57,6 +57,7 @@ class LandingPage extends Component {
 
     return (
       <div className="smothscroll">
+
         <Helmet>
           <title>Home & Über uns - ZHJ</title>
           <meta
