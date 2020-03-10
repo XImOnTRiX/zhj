@@ -42,8 +42,8 @@ class Footer extends Component {
                 </div>
               </div>
             </div>
-            <div className="colmd-4">
-              <h6 className="container light">Verlinkungen</h6>
+            <div className="colmd-3">
+              <h6 className="container light"> </h6>
               <div className="row">
                 <div className="colmd-6 colz-6">
                   <NavLink to="/fahrzeugtechnik"><p className="primary">Fahrzeugtechnik</p></NavLink>
@@ -59,7 +59,7 @@ class Footer extends Component {
                 </div>
               </div>
             </div>
-            <div className="colmd-4">
+            <div className="colmd-3">
               <h6 className="container light">Kontaktinformationen</h6>
               <p className="container primary">
                 ZHJ Fahrzeugtechnik Handels u. Dienstleistungs GesmbH <br />
@@ -67,9 +67,17 @@ class Footer extends Component {
                 9330 Mölbling
               </p>
               <p className="container nopt primary">
-                T. 04262 / 27 380 <br />
-                F. 04262 / 27 388 <br />
+                T 04262 / 27 380 <br />
+                F 04262 / 27 388 <br />
                 office@zhj-fahrzeugtechnik.at <br />
+              </p>
+            </div>
+            <div className="colmd-2">
+              <h6 className="container light">Öffnungszeiten</h6>
+              <p className="container primary">
+                Montag bis Freitag <br />
+                08:00 Uhr – 12:00 Uhr<br />
+                12:30 Uhr – 17:00 Uhr
               </p>
             </div>
           </div>

@@ -118,7 +118,8 @@ class FzTechnikPage extends Component {
         {/* <GallerySection name="Fahrzeugtechnik"/> */}
 
         <Preorder
-          button="Kontakt"
+          button="T 04262 / 27 380"
+          button2="office@zhj-fahrzeugtechnik.at"
           title="Kontaktieren Sie uns"
           text="Für weitere Fragen, Beratung und/oder mehr Informationen zu den Angeboten steht Ihnen das Team von ZHJ gerne zur Verfügung."
           time={false}

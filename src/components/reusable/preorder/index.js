@@ -55,7 +55,7 @@ class Preorder extends Component{
             {this.props.title}
           </h1>
         </Fade>
-        <div className="row container">
+        <div className="row container justify-center">
           <Fade bottom>
             <p className="text align-center">
               {this.props.text}
@@ -65,9 +65,14 @@ class Preorder extends Component{
 
         <div className="row container justify-center">
           <Fade bottom>
-            <button onClick={this.handleClick} className="btn-border-rounded-full orderButton">
+            <p className="btn-border-rounded-full orderButton">
               {this.props.button}
-            </button>
+            </p>
+          </Fade>
+          <Fade bottom>
+            <p className="btn-border-rounded-full orderButton">
+              {this.props.button2}
+            </p>
           </Fade>
           <div className="row container justify-center">
             {this.togglePopUp()}

@@ -21,6 +21,7 @@ import OurTeam from '../../reusable/team';
 import GallerySection from '../../reusable/gallery';
 
 import { NavLink } from 'react-router-dom';
+import { url } from "../../reusable/nav/url";
 
 import Fade from 'react-reveal/Fade';
 
@@ -48,7 +49,7 @@ class LandingPage extends Component {
   }
 
   scrolling = () => {
-    window.scrollBy({ top: 700, left: 0, behavior: "smooth" });
+    window.scrollBy({ top: 950, left: 0, behavior: "smooth" });
   }
 
   render(){
@@ -87,15 +88,38 @@ class LandingPage extends Component {
             Taxiunternehmen reglementiert, bieten Erdbauarbeiten an und
             verleihen Minibagger.
           </p>
-          <div className="row justify-center container">
-            <div onClick={this.scrolling} className="btn-border-rounded-full">
-              <p className="align-center">mehr erfahren</p>
-            </div>
-          </div>
+
         </Header>
 
         <div id="finish" className="container-big row sp-icon-container">
-          {this.renderIcons(iconArray)}
+          <div className="colz-4 collg-2">
+            <NavLink to={url[0]}>
+              <img alt="" src={Technik} />
+            </NavLink>
+          </div>
+          <div className="colz-4 collg-2">
+            <NavLink to={url[1]}>
+              <img alt="" src={Autohandel} />
+            </NavLink>
+          </div>
+          <div className="colz-4 collg-2">
+            <NavLink to={url[2]}>
+              <img alt="" src={Autovermietung} />
+            </NavLink>
+          </div>
+          <div className="colz-4 collg-2">
+            <NavLink to={url[3]}>
+              <img alt="" src={Taxi} />
+            </NavLink>
+          </div>
+          <div className="colz-4 collg-2">
+            <NavLink to={url[4]}>
+              <img alt="" src={Erdbau} />
+            </NavLink>
+          </div>
+          <div className="colz-4 collg-2">
+            <img alt="" src={About} onClick={this.scrolling}/>
+          </div>
         </div>
 
         <div className="container-big pt">
@@ -106,32 +130,52 @@ class LandingPage extends Component {
             <Fade bottom>
               <div className="colmd-6">
                 <p className="align-center">
-                  Die Liebe zum Fahrzeug beginnt meist in den Kinderschuhen. So
-                  auch bei mir. Meine Ausbildungen zum KFZ-Techniker im Jahr
-                  2001 sowie die weiteren Ausbildungen zum
-                  Karosseriebautechniker und Lackierer waren geprägt davon.
+                  Fahrzeuge faszinierten mich bereits im Kindesalter.
+                  Mit viel Hingabe und Sorgfalt wurde jedes neue Matchbox Auto
+                  bis ins kleinste Detail erforscht. Manchmal auch unter Zuhilfenahme
+                  eines Hammers. Meine Mutter nannte mich damals liebevoll "Mec <span className="bold">HIN</span> iker".
                   <br />
                   <br />
-                  Meine KFZ-Werkstätte mit vorerst Reparaturarbeiten startete in
-                  einem kleinen angemieteten Gebäude in Treffling. In Feistritz
-                  ob Grades wurde später expandiert und ein Miethaus samt
-                  LKW-Garage bot Platz. <br />
-                  <br />
-                  2005 absolvierte ich erfolgreich den KFZ-Techiker Meister,
-                  später den Karosseriebautechniker Meister, den Lackierer
-                  Meister und den Landmaschinentechniker Meister.
+                  Durch meine Lehre zum KFZ-Techniker (1997-2001, Autohaus Heinz Hofstätter)
+                  sowie in weiterer Folge zum Karosseriebautechniker (2001-2003, Firma Karosserie Puck)
+                  konnte ich meine Fertigkeiten zum Glück verfeinern.
                   <br />
                   <br />
-                  2009 begann der Bau des KFZ-Meisterbetriebs in Mölbling-Ost 4.
-                  Noch im selben Jahr wurde „ZHJ – Zitzenbacher Herbert jun. –
-                  Fahrzeugtechnik Handels- und Dienstleistungs GesmbH“
-                  gegründet!
+                  2005 absolvierte ich erfolgreich den <span className="bold">KFZ-Techniker Meister</span>, darauf folgten
+                  noch der <span className="bold">Karosseriebautechniker- und Landmaschinentechniker Meister</span>.
+                  Im selben Jahr startete ich in die Selbstständigkeit.
                   <br />
                   <br />
-                  2017 wurde die Werkstatt durch einen Zubau mit einer
-                  Spenglerei und Lackiererei erweitert.
+                  Vorerst wurden Reparaturarbeiten in einem alten, angemieteten Stall in Treffling durchgeführt
                   <br />
                   <br />
+                  Doch schon bald wurde der Platz zu klein und es verschlug mich, meine damalige Freundin
+                  und heutige Frau Carmen, sowie unseren 2003 geborenen Sohn Lukas nach Feistritz ob Grades
+                  wo wir ein Haus mit LKW-Garagen mieteten.
+                  <br />
+                  <br />
+                  2007 wurde unsere Tochter Lena geboren.
+                  <br />
+                  <br />
+                  Als auch das Haus in Feistritz ob Grades nicht mehr genug Platz bot, begannen wir
+                  2009 mit dem Bau des KFZ-Meisterbetriebes am heutigen Standort in Mölbling-Ost 4.
+                  Noch im selben Jahr wurde die ZHJ Fahrzeugtechnik Handels u Dienstleistungs GesmbH gegründet.
+                  <br />
+                  <br />
+                  Im Jahr 2012 wurde unsere Tochter Lilli geborgen und machte unsere Familie komplett.
+                  <br />
+                  <br />
+                  Das konnte man von unserem Standort nicht behaupten, denn 2017 wurde die Werkstatt
+                  um einen 600 m² großen Zubau mit Spenglerei und Lackiererei erweitert und umfasst
+                  mittlerweile 16 Hebebühnen.
+                  <br />
+                  <br />
+                  Auf diesem Weg liebe Kunden, möchte ich Ihnen meinen Dank für Ihr Vertrauen aussprechen.
+                  Ein Dankeschön gilt aber auch jedem unserer Mitarbeiter, die engagiert und
+                  professionell mit uns ans Werk gehen.
+                  <br />
+                  <br />
+                  Mein Slogan lautet:
                   <span className="italic bold">
                     " AUTOREPARATUR IST VERTRAUENSSACHE! "
                   </span>
@@ -148,7 +192,8 @@ class LandingPage extends Component {
         <GallerySection name="Über uns" />
 
         <Preorder
-          button="Kontakt"
+          button="T 04262 / 27 380"
+          button2="office@zhj-fahrzeugtechnik.at"
           title="Kontaktieren Sie uns"
           text="Für weitere Fragen, Beratung und/oder mehr Informationen zu den Angeboten steht Ihnen das Team von ZHJ gerne zur Verfügung."
           time={false}

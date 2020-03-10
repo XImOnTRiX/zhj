@@ -71,7 +71,7 @@ a:active { color: none; }
 
 .black { font-weight: 900 !important; }
 
-.uppercase, .btn, .btn-border, .btn-border-rounded, .btn-border-rounded-full { text-transform: uppercase; }
+.uppercase, .btn, .btn-border, .btn-border-rounded { text-transform: uppercase; }
 
 .italic { font-style: italic; }
 

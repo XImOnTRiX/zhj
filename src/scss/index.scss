@@ -45,6 +45,16 @@
   src: url(../media/fonts/7thservice.ttf) format('truetype');
 }
 
+.orderButton{
+  cursor:default;
+  margin-right: 5px;
+  margin-left: 5px;
+  &:hover {
+    background-color: transparent !important;
+    color: $color-tertiary !important;
+  }
+}
+
 .dtlist{
   padding-left: 20px;
   li::before {
@@ -164,7 +174,7 @@
 .logoleiste {
   position: absolute;
   right: 7%;
-  top: 20%;
+  top: calc(100vh - 80vh);
   max-width: 150px;
   flex-wrap: wrap;
   div {

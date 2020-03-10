@@ -11,6 +11,12 @@ import Erdbau from "../../../media/logos/erdbau.png";
 import About from "../../../media/logos/about.png";
 
 import OnlineImg from "../../../media/logos/ZHJ_ONLINE.png";
+import ErdbauImg from "../../../media/logos/withoutShadow/erdbau.png";
+import AboutImg from "../../../media/logos/withoutShadow/about.png";
+import TaxiImg from "../../../media/logos/withoutShadow/Taxi.png";
+import FzTechnikImg from "../../../media/logos/withoutShadow/fzTechik.png";
+import AutohandelImg from "../../../media/logos/withoutShadow/autohandel.png";
+import AutovermietungImg from "../../../media/logos/withoutShadow/autovermietung.png";
 
 export class Navigation extends Component {
   constructor(props) {
@@ -40,6 +46,14 @@ export class Navigation extends Component {
     this.setClassColored();
   };
 
+  scrolling = () => {
+    window.scrollBy({ top: 950, left: 0, behavior: "smooth" });
+    this.setState(prevState => ({
+      open: !prevState.open,
+      nav: this.state.open === true ? "closed-nav" : "open-nav"
+    }));
+  }
+
   handleClick = () => {
     this.setState(prevState => ({
       open: !prevState.open,
@@ -67,23 +81,23 @@ export class Navigation extends Component {
   whereAmI = () => {
     switch (document.location.pathname) {
       case url[0]:
-        return "Fahrzeugtechnik";
+        return FzTechnikImg;
       case url[1]:
-        return "Autohandel";
+        return AutohandelImg;
       case url[2]:
-        return "Autovermietung";
+        return AutovermietungImg;
       case url[3]:
-        return "Taxi";
+        return TaxiImg;
       case url[4]:
-        return "Erdbau";
+        return ErdbauImg;
       case url[5]:
-        return "Über uns";
+        return AboutImg;
       case "/datenschutz":
-        return "Datenschutz";
+        return OnlineImg;
       case "/impressum":
-        return "Impressum";
+        return OnlineImg;
       default:
-        return "Über uns";
+        return OnlineImg;
     }
   };
 
@@ -143,7 +157,6 @@ export class Navigation extends Component {
       );
     }
   };
-
   render() {
     return (
       <div id="navpos" className="nav-container">
@@ -168,6 +181,11 @@ export class Navigation extends Component {
           </div>
 
           <nav className={this.state.nav}>
+            <p className={this.state.nav + " nav-link-1"}>
+              <NavLink onClick={this.handleClick} to={url[5]}>
+                Home
+              </NavLink>
+            </p>
             <p className={this.state.nav + " nav-link-1"}>
               <NavLink onClick={this.handleClick} to={url[0]}>
                 Fahrzeugtechnik
@@ -194,8 +212,8 @@ export class Navigation extends Component {
               </NavLink>
             </p>
             <p className={this.state.nav + " nav-link-6"}>
-              <NavLink onClick={this.handleClick} to={url[5]}>
-                Über uns
+              <NavLink onClick={this.handleClick && this.scrolling} to={url[5]}>
+                Über Uns
               </NavLink>
             </p>
           </nav>
@@ -215,12 +233,12 @@ export class Navigation extends Component {
               <img
                 alt="zhj online logo"
                 className="coloredNavClass"
-                src={OnlineImg}
+                src={this.whereAmI()}
               />
             </NavLink>
           </div>
           <div className="colz-6">
-            <h6 className="align-center">{this.whereAmI()}</h6>
+            {/* <h6 className="align-center">{this.whereAmI()}</h6> */}
           </div>
           <div className="colz-3"></div>
         </div>
