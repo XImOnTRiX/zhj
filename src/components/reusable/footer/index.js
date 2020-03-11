@@ -8,7 +8,14 @@ import { NavLink } from 'react-router-dom';
 
 // import FooterImg from '../../../media/grafiken/bg-footer.svg';
 
+
 class Footer extends Component {
+  scrolling = () => {
+    setTimeout(function(){ window.scrollTo({ top: 950, left: 0, behavior: "smooth" }); }, 800);
+
+      // window.scrollBy({ top: 950, left: 0, behavior: "smooth" });
+  }
+
   render() {
     return (
       <div>
@@ -53,7 +60,7 @@ class Footer extends Component {
                   <NavLink to="/erdbau"><p className="primary">Erdbau</p></NavLink>
                 </div>
                 <div className="colmd-6 colz-6">
-                  <NavLink to="/über-uns"><p className="primary">Über uns</p></NavLink>
+                  <NavLink to="/über-uns" onClick={this.scrolling} ><p className="primary">Über uns</p></NavLink>
                   <NavLink to="/impressum"><p className="primary">Impressum</p></NavLink>
                   <NavLink to="/datenschutz"><p className="primary">Datenschutz</p></NavLink>
                 </div>

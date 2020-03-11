@@ -47,7 +47,14 @@ export class Navigation extends Component {
   };
 
   scrolling = () => {
-    window.scrollBy({ top: 950, left: 0, behavior: "smooth" });
+    setTimeout(function(){ window.scrollTo({ top: 950, left: 0, behavior: "smooth" }); }, 800);
+    this.setState(prevState => ({
+      open: !prevState.open,
+      nav: this.state.open === true ? "closed-nav" : "open-nav"
+    }));
+  }
+  scrolling0 = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     this.setState(prevState => ({
       open: !prevState.open,
       nav: this.state.open === true ? "closed-nav" : "open-nav"
@@ -182,7 +189,7 @@ export class Navigation extends Component {
 
           <nav className={this.state.nav}>
             <p className={this.state.nav + " nav-link-1"}>
-              <NavLink onClick={this.handleClick} to={url[5]}>
+              <NavLink onClick={this.handleClick && this.scrolling0} to={url[5]}>
                 Home
               </NavLink>
             </p>

@@ -34,7 +34,7 @@ class Impressum extends Component {
           <link rel="canonical" href="https://www.zhj.at/impressum" />
         </Helmet>
 
-        <div className="hh"></div>
+        <div className="hh2"></div>
         <div className="container pb">
           <h1 className="light">
             Impressum
@@ -51,7 +51,7 @@ class Impressum extends Component {
           </p>
           <p className="sspt">
             T 04262 27380<br />
-            Fax 04262 27388<br />
+            F 04262 27388<br />
             office@zhj-fahrzeugtechnik.at<br />
           </p>
           <p className="sspt">

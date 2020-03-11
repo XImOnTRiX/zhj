@@ -17,9 +17,10 @@ class App extends Component {
           buttonText="Verstanden"
           declineButtonText="Ablehnen"
           enableDeclineButton
+          declineButtonStyle={{background:"#333"}}
         >
           <span className="cookieText">Diese Website verwendet Cookies. Hier gehts zu unserem <NavLink to={"/datenschutz"} className="bold">Datenschutz</NavLink></span>
-          
+
         </CookieConsent>
       </div>
     );

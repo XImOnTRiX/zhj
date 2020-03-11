@@ -33,7 +33,7 @@ class Datenschutz extends Component {
 
           <link rel="canonical" href="https://www.zhj.at/datenschutzerklärung" />
         </Helmet>
-        <div className="hh"></div>
+        <div className="hh2"></div>
         <div className="container">
           <h1 className="light">
             Datenschutz
